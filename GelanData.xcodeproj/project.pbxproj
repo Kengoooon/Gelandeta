@@ -1,0 +1,535 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BFAEEF9F1E4B31BE00C097C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAEEF9E1E4B31BE00C097C8 /* AppDelegate.swift */; };
+		BFAEEFA11E4B31BE00C097C8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAEEFA01E4B31BE00C097C8 /* ViewController.swift */; };
+		BFAEEFA41E4B31BE00C097C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFAEEFA21E4B31BE00C097C8 /* Main.storyboard */; };
+		BFAEEFA61E4B31BE00C097C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFAEEFA51E4B31BE00C097C8 /* Assets.xcassets */; };
+		BFAEEFA91E4B31BE00C097C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFAEEFA71E4B31BE00C097C8 /* LaunchScreen.storyboard */; };
+		BFAEEFB41E4B31BF00C097C8 /* GelanDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAEEFB31E4B31BF00C097C8 /* GelanDataTests.swift */; };
+		BFAEEFBF1E4B31BF00C097C8 /* GelanDataUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAEEFBE1E4B31BF00C097C8 /* GelanDataUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BFAEEFB01E4B31BF00C097C8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFAEEF931E4B31BE00C097C8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BFAEEF9A1E4B31BE00C097C8;
+			remoteInfo = GelanData;
+		};
+		BFAEEFBB1E4B31BF00C097C8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFAEEF931E4B31BE00C097C8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BFAEEF9A1E4B31BE00C097C8;
+			remoteInfo = GelanData;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BFAEEF9B1E4B31BE00C097C8 /* GelanData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GelanData.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFAEEF9E1E4B31BE00C097C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BFAEEFA01E4B31BE00C097C8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BFAEEFA31E4B31BE00C097C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BFAEEFA51E4B31BE00C097C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BFAEEFA81E4B31BE00C097C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BFAEEFAA1E4B31BE00C097C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFAEEFAF1E4B31BF00C097C8 /* GelanDataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GelanDataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFAEEFB31E4B31BF00C097C8 /* GelanDataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GelanDataTests.swift; sourceTree = "<group>"; };
+		BFAEEFB51E4B31BF00C097C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFAEEFBA1E4B31BF00C097C8 /* GelanDataUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GelanDataUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFAEEFBE1E4B31BF00C097C8 /* GelanDataUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GelanDataUITests.swift; sourceTree = "<group>"; };
+		BFAEEFC01E4B31BF00C097C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BFAEEF981E4B31BE00C097C8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BFAEEFAC1E4B31BF00C097C8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BFAEEFB71E4B31BF00C097C8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BFAEEF921E4B31BE00C097C8 = {
+			isa = PBXGroup;
+			children = (
+				BFAEEF9D1E4B31BE00C097C8 /* GelanData */,
+				BFAEEFB21E4B31BF00C097C8 /* GelanDataTests */,
+				BFAEEFBD1E4B31BF00C097C8 /* GelanDataUITests */,
+				BFAEEF9C1E4B31BE00C097C8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BFAEEF9C1E4B31BE00C097C8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BFAEEF9B1E4B31BE00C097C8 /* GelanData.app */,
+				BFAEEFAF1E4B31BF00C097C8 /* GelanDataTests.xctest */,
+				BFAEEFBA1E4B31BF00C097C8 /* GelanDataUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BFAEEF9D1E4B31BE00C097C8 /* GelanData */ = {
+			isa = PBXGroup;
+			children = (
+				BFAEEF9E1E4B31BE00C097C8 /* AppDelegate.swift */,
+				BFAEEFA01E4B31BE00C097C8 /* ViewController.swift */,
+				BFAEEFA21E4B31BE00C097C8 /* Main.storyboard */,
+				BFAEEFA51E4B31BE00C097C8 /* Assets.xcassets */,
+				BFAEEFA71E4B31BE00C097C8 /* LaunchScreen.storyboard */,
+				BFAEEFAA1E4B31BE00C097C8 /* Info.plist */,
+			);
+			path = GelanData;
+			sourceTree = "<group>";
+		};
+		BFAEEFB21E4B31BF00C097C8 /* GelanDataTests */ = {
+			isa = PBXGroup;
+			children = (
+				BFAEEFB31E4B31BF00C097C8 /* GelanDataTests.swift */,
+				BFAEEFB51E4B31BF00C097C8 /* Info.plist */,
+			);
+			path = GelanDataTests;
+			sourceTree = "<group>";
+		};
+		BFAEEFBD1E4B31BF00C097C8 /* GelanDataUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BFAEEFBE1E4B31BF00C097C8 /* GelanDataUITests.swift */,
+				BFAEEFC01E4B31BF00C097C8 /* Info.plist */,
+			);
+			path = GelanDataUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BFAEEF9A1E4B31BE00C097C8 /* GelanData */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BFAEEFC31E4B31BF00C097C8 /* Build configuration list for PBXNativeTarget "GelanData" */;
+			buildPhases = (
+				BFAEEF971E4B31BE00C097C8 /* Sources */,
+				BFAEEF981E4B31BE00C097C8 /* Frameworks */,
+				BFAEEF991E4B31BE00C097C8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GelanData;
+			productName = GelanData;
+			productReference = BFAEEF9B1E4B31BE00C097C8 /* GelanData.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BFAEEFAE1E4B31BF00C097C8 /* GelanDataTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BFAEEFC61E4B31BF00C097C8 /* Build configuration list for PBXNativeTarget "GelanDataTests" */;
+			buildPhases = (
+				BFAEEFAB1E4B31BF00C097C8 /* Sources */,
+				BFAEEFAC1E4B31BF00C097C8 /* Frameworks */,
+				BFAEEFAD1E4B31BF00C097C8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BFAEEFB11E4B31BF00C097C8 /* PBXTargetDependency */,
+			);
+			name = GelanDataTests;
+			productName = GelanDataTests;
+			productReference = BFAEEFAF1E4B31BF00C097C8 /* GelanDataTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BFAEEFB91E4B31BF00C097C8 /* GelanDataUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BFAEEFC91E4B31BF00C097C8 /* Build configuration list for PBXNativeTarget "GelanDataUITests" */;
+			buildPhases = (
+				BFAEEFB61E4B31BF00C097C8 /* Sources */,
+				BFAEEFB71E4B31BF00C097C8 /* Frameworks */,
+				BFAEEFB81E4B31BF00C097C8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BFAEEFBC1E4B31BF00C097C8 /* PBXTargetDependency */,
+			);
+			name = GelanDataUITests;
+			productName = GelanDataUITests;
+			productReference = BFAEEFBA1E4B31BF00C097C8 /* GelanDataUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFAEEF931E4B31BE00C097C8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = kengo;
+				TargetAttributes = {
+					BFAEEF9A1E4B31BE00C097C8 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = ME2P39A3QN;
+						ProvisioningStyle = Automatic;
+					};
+					BFAEEFAE1E4B31BF00C097C8 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = ME2P39A3QN;
+						ProvisioningStyle = Automatic;
+						TestTargetID = BFAEEF9A1E4B31BE00C097C8;
+					};
+					BFAEEFB91E4B31BF00C097C8 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = ME2P39A3QN;
+						ProvisioningStyle = Automatic;
+						TestTargetID = BFAEEF9A1E4B31BE00C097C8;
+					};
+				};
+			};
+			buildConfigurationList = BFAEEF961E4B31BE00C097C8 /* Build configuration list for PBXProject "GelanData" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BFAEEF921E4B31BE00C097C8;
+			productRefGroup = BFAEEF9C1E4B31BE00C097C8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BFAEEF9A1E4B31BE00C097C8 /* GelanData */,
+				BFAEEFAE1E4B31BF00C097C8 /* GelanDataTests */,
+				BFAEEFB91E4B31BF00C097C8 /* GelanDataUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BFAEEF991E4B31BE00C097C8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFAEEFA91E4B31BE00C097C8 /* LaunchScreen.storyboard in Resources */,
+				BFAEEFA61E4B31BE00C097C8 /* Assets.xcassets in Resources */,
+				BFAEEFA41E4B31BE00C097C8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BFAEEFAD1E4B31BF00C097C8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BFAEEFB81E4B31BF00C097C8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BFAEEF971E4B31BE00C097C8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFAEEFA11E4B31BE00C097C8 /* ViewController.swift in Sources */,
+				BFAEEF9F1E4B31BE00C097C8 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BFAEEFAB1E4B31BF00C097C8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFAEEFB41E4B31BF00C097C8 /* GelanDataTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BFAEEFB61E4B31BF00C097C8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFAEEFBF1E4B31BF00C097C8 /* GelanDataUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BFAEEFB11E4B31BF00C097C8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BFAEEF9A1E4B31BE00C097C8 /* GelanData */;
+			targetProxy = BFAEEFB01E4B31BF00C097C8 /* PBXContainerItemProxy */;
+		};
+		BFAEEFBC1E4B31BF00C097C8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BFAEEF9A1E4B31BE00C097C8 /* GelanData */;
+			targetProxy = BFAEEFBB1E4B31BF00C097C8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BFAEEFA21E4B31BE00C097C8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BFAEEFA31E4B31BE00C097C8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BFAEEFA71E4B31BE00C097C8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BFAEEFA81E4B31BE00C097C8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BFAEEFC11E4B31BF00C097C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BFAEEFC21E4B31BF00C097C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BFAEEFC41E4B31BF00C097C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = ME2P39A3QN;
+				INFOPLIST_FILE = GelanData/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = self.GelanData;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		BFAEEFC51E4B31BF00C097C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = ME2P39A3QN;
+				INFOPLIST_FILE = GelanData/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = self.GelanData;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		BFAEEFC71E4B31BF00C097C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = ME2P39A3QN;
+				INFOPLIST_FILE = GelanDataTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = self.GelanDataTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GelanData.app/GelanData";
+			};
+			name = Debug;
+		};
+		BFAEEFC81E4B31BF00C097C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = ME2P39A3QN;
+				INFOPLIST_FILE = GelanDataTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = self.GelanDataTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GelanData.app/GelanData";
+			};
+			name = Release;
+		};
+		BFAEEFCA1E4B31BF00C097C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = ME2P39A3QN;
+				INFOPLIST_FILE = GelanDataUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = self.GelanDataUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = GelanData;
+			};
+			name = Debug;
+		};
+		BFAEEFCB1E4B31BF00C097C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = ME2P39A3QN;
+				INFOPLIST_FILE = GelanDataUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = self.GelanDataUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = GelanData;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BFAEEF961E4B31BE00C097C8 /* Build configuration list for PBXProject "GelanData" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BFAEEFC11E4B31BF00C097C8 /* Debug */,
+				BFAEEFC21E4B31BF00C097C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BFAEEFC31E4B31BF00C097C8 /* Build configuration list for PBXNativeTarget "GelanData" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BFAEEFC41E4B31BF00C097C8 /* Debug */,
+				BFAEEFC51E4B31BF00C097C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BFAEEFC61E4B31BF00C097C8 /* Build configuration list for PBXNativeTarget "GelanDataTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BFAEEFC71E4B31BF00C097C8 /* Debug */,
+				BFAEEFC81E4B31BF00C097C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BFAEEFC91E4B31BF00C097C8 /* Build configuration list for PBXNativeTarget "GelanDataUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BFAEEFCA1E4B31BF00C097C8 /* Debug */,
+				BFAEEFCB1E4B31BF00C097C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFAEEF931E4B31BE00C097C8 /* Project object */;
+}
