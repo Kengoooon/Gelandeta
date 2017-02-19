@@ -8,6 +8,8 @@
 
 import UIKit
 import GoogleMaps;
+import Fabric
+import TwitterKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,11 +17,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     let cGoogleMapsAPIKey = "AIzaSyAB0vfMdryt9KtBtOOXKfZUr5YrjoI0q0k"
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         // Google Mapsの初期設定
         GMSServices.provideAPIKey(cGoogleMapsAPIKey)
+        Fabric.with([Twitter.self])
         return true
     }
 

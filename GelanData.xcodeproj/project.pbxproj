@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		350EFDF959F7C6A46986E1FA /* libPods-GelanData.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AA76C290FCECFCC223D736F /* libPods-GelanData.a */; };
+		BF8A012C1E57396800D8DCC4 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF8A012B1E57396800D8DCC4 /* CoreLocation.framework */; };
+		BF8A012E1E57F61100D8DCC4 /* TwitterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8A012D1E57F61100D8DCC4 /* TwitterViewController.swift */; };
+		BF8A01341E59386F00D8DCC4 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF8A01301E59386F00D8DCC4 /* Fabric.framework */; };
+		BF8A01351E59386F00D8DCC4 /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF8A01311E59386F00D8DCC4 /* TwitterKit.framework */; };
+		BF8A01361E59386F00D8DCC4 /* TwitterKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BF8A01321E59386F00D8DCC4 /* TwitterKitResources.bundle */; };
+		BF8A01371E59386F00D8DCC4 /* TwitterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF8A01331E59386F00D8DCC4 /* TwitterCore.framework */; };
+		BF8A01391E59609200D8DCC4 /* twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = BF8A01381E59609200D8DCC4 /* twitter.png */; };
+		BF8A013B1E5964CD00D8DCC4 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8A013A1E5964CD00D8DCC4 /* MapViewController.swift */; };
 		BF9CE02F1E4B42EB0033BFD8 /* gelande.csv in Resources */ = {isa = PBXBuildFile; fileRef = BF9CE02E1E4B42EB0033BFD8 /* gelande.csv */; };
 		BF9CE0311E4B4C180033BFD8 /* LoadFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9CE0301E4B4C180033BFD8 /* LoadFile.swift */; };
 		BFAEEF9F1E4B31BE00C097C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAEEF9E1E4B31BE00C097C8 /* AppDelegate.swift */; };
@@ -40,6 +48,14 @@
 		277229AC31B50B511FEF1B20 /* Pods-GelanData.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GelanData.release.xcconfig"; path = "Pods/Target Support Files/Pods-GelanData/Pods-GelanData.release.xcconfig"; sourceTree = "<group>"; };
 		3AA76C290FCECFCC223D736F /* libPods-GelanData.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GelanData.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5548C366BB2648E3C842C02D /* Pods-GelanData.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GelanData.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GelanData/Pods-GelanData.debug.xcconfig"; sourceTree = "<group>"; };
+		BF8A012B1E57396800D8DCC4 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		BF8A012D1E57F61100D8DCC4 /* TwitterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterViewController.swift; sourceTree = "<group>"; };
+		BF8A01301E59386F00D8DCC4 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = SOURCE_ROOT; };
+		BF8A01311E59386F00D8DCC4 /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterKit.framework; sourceTree = SOURCE_ROOT; };
+		BF8A01321E59386F00D8DCC4 /* TwitterKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TwitterKitResources.bundle; path = TwitterKit.framework/Versions/A/Resources/TwitterKitResources.bundle; sourceTree = SOURCE_ROOT; };
+		BF8A01331E59386F00D8DCC4 /* TwitterCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterCore.framework; sourceTree = SOURCE_ROOT; };
+		BF8A01381E59609200D8DCC4 /* twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = twitter.png; path = ../../twitter.png; sourceTree = "<group>"; };
+		BF8A013A1E5964CD00D8DCC4 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		BF9CE02E1E4B42EB0033BFD8 /* gelande.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = gelande.csv; sourceTree = "<group>"; };
 		BF9CE0301E4B4C180033BFD8 /* LoadFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadFile.swift; sourceTree = "<group>"; };
 		BFAEEF9B1E4B31BE00C097C8 /* GelanData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GelanData.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -62,7 +78,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF8A01371E59386F00D8DCC4 /* TwitterCore.framework in Frameworks */,
+				BF8A012C1E57396800D8DCC4 /* CoreLocation.framework in Frameworks */,
 				350EFDF959F7C6A46986E1FA /* libPods-GelanData.a in Frameworks */,
+				BF8A01341E59386F00D8DCC4 /* Fabric.framework in Frameworks */,
+				BF8A01351E59386F00D8DCC4 /* TwitterKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +106,7 @@
 		252306DD9C97AACFE101AACA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BF8A012B1E57396800D8DCC4 /* CoreLocation.framework */,
 				3AA76C290FCECFCC223D736F /* libPods-GelanData.a */,
 			);
 			name = Frameworks;
@@ -126,13 +147,20 @@
 			isa = PBXGroup;
 			children = (
 				BFAEEF9E1E4B31BE00C097C8 /* AppDelegate.swift */,
+				BF8A01301E59386F00D8DCC4 /* Fabric.framework */,
+				BF8A01311E59386F00D8DCC4 /* TwitterKit.framework */,
+				BF8A01321E59386F00D8DCC4 /* TwitterKitResources.bundle */,
+				BF8A01331E59386F00D8DCC4 /* TwitterCore.framework */,
 				BFAEEFA01E4B31BE00C097C8 /* ViewController.swift */,
 				BF9CE0301E4B4C180033BFD8 /* LoadFile.swift */,
 				BF9CE02E1E4B42EB0033BFD8 /* gelande.csv */,
 				BFAEEFA21E4B31BE00C097C8 /* Main.storyboard */,
+				BF8A013A1E5964CD00D8DCC4 /* MapViewController.swift */,
+				BF8A012D1E57F61100D8DCC4 /* TwitterViewController.swift */,
 				BFAEEFA51E4B31BE00C097C8 /* Assets.xcassets */,
 				BFAEEFA71E4B31BE00C097C8 /* LaunchScreen.storyboard */,
 				BFAEEFAA1E4B31BE00C097C8 /* Info.plist */,
+				BF8A01381E59609200D8DCC4 /* twitter.png */,
 			);
 			path = GelanData;
 			sourceTree = "<group>";
@@ -167,6 +195,7 @@
 				BFAEEF981E4B31BE00C097C8 /* Frameworks */,
 				BFAEEF991E4B31BE00C097C8 /* Resources */,
 				D423A9E3C3492726A33BD6EE /* Copy Pods Resources */,
+				BF8A012F1E57F84900D8DCC4 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -270,7 +299,9 @@
 				BFAEEFA91E4B31BE00C097C8 /* LaunchScreen.storyboard in Resources */,
 				BF9CE02F1E4B42EB0033BFD8 /* gelande.csv in Resources */,
 				BFAEEFA61E4B31BE00C097C8 /* Assets.xcassets in Resources */,
+				BF8A01391E59609200D8DCC4 /* twitter.png in Resources */,
 				BFAEEFA41E4B31BE00C097C8 /* Main.storyboard in Resources */,
+				BF8A01361E59386F00D8DCC4 /* TwitterKitResources.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,6 +322,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		BF8A012F1E57F84900D8DCC4 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run c6d315502ab7c83aaf52d6e8f57717929b5882c8 503536513a7ec487fbd6a14b24d09203481ab1b78ebf6b97bb15c4971ac63749";
+		};
 		D423A9E3C3492726A33BD6EE /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -328,8 +372,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF8A012E1E57F61100D8DCC4 /* TwitterViewController.swift in Sources */,
 				BFAEEFA11E4B31BE00C097C8 /* ViewController.swift in Sources */,
 				BFAEEF9F1E4B31BE00C097C8 /* AppDelegate.swift in Sources */,
+				BF8A013B1E5964CD00D8DCC4 /* MapViewController.swift in Sources */,
 				BF9CE0311E4B4C180033BFD8 /* LoadFile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -482,6 +528,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = ME2P39A3QN;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = GelanData/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -498,6 +548,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = ME2P39A3QN;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = GelanData/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
