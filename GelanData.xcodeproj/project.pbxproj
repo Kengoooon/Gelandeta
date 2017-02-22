@@ -16,8 +16,9 @@
 		BF8A01371E59386F00D8DCC4 /* TwitterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF8A01331E59386F00D8DCC4 /* TwitterCore.framework */; };
 		BF8A01391E59609200D8DCC4 /* twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = BF8A01381E59609200D8DCC4 /* twitter.png */; };
 		BF8A013B1E5964CD00D8DCC4 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8A013A1E5964CD00D8DCC4 /* MapViewController.swift */; };
-		BF8A013D1E59D2C000D8DCC4 /* TwitterAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8A013C1E59D2BF00D8DCC4 /* TwitterAPI.swift */; };
 		BF8A013F1E59E07500D8DCC4 /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8A013E1E59E07500D8DCC4 /* TimelineViewController.swift */; };
+		BF8A01411E5DDB5000D8DCC4 /* SnowboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8A01401E5DDB5000D8DCC4 /* SnowboardViewController.swift */; };
+		BF8A01431E5DE48D00D8DCC4 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8A01421E5DE48D00D8DCC4 /* UIView.swift */; };
 		BF9CE02F1E4B42EB0033BFD8 /* gelande.csv in Resources */ = {isa = PBXBuildFile; fileRef = BF9CE02E1E4B42EB0033BFD8 /* gelande.csv */; };
 		BF9CE0311E4B4C180033BFD8 /* LoadFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9CE0301E4B4C180033BFD8 /* LoadFile.swift */; };
 		BFAEEF9F1E4B31BE00C097C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAEEF9E1E4B31BE00C097C8 /* AppDelegate.swift */; };
@@ -58,8 +59,9 @@
 		BF8A01331E59386F00D8DCC4 /* TwitterCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterCore.framework; sourceTree = SOURCE_ROOT; };
 		BF8A01381E59609200D8DCC4 /* twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = twitter.png; path = ../../twitter.png; sourceTree = "<group>"; };
 		BF8A013A1E5964CD00D8DCC4 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		BF8A013C1E59D2BF00D8DCC4 /* TwitterAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterAPI.swift; sourceTree = "<group>"; };
 		BF8A013E1E59E07500D8DCC4 /* TimelineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineViewController.swift; sourceTree = "<group>"; };
+		BF8A01401E5DDB5000D8DCC4 /* SnowboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnowboardViewController.swift; sourceTree = "<group>"; };
+		BF8A01421E5DE48D00D8DCC4 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		BF9CE02E1E4B42EB0033BFD8 /* gelande.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = gelande.csv; sourceTree = "<group>"; };
 		BF9CE0301E4B4C180033BFD8 /* LoadFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadFile.swift; sourceTree = "<group>"; };
 		BFAEEF9B1E4B31BE00C097C8 /* GelanData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GelanData.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -159,9 +161,10 @@
 				BF9CE0301E4B4C180033BFD8 /* LoadFile.swift */,
 				BF9CE02E1E4B42EB0033BFD8 /* gelande.csv */,
 				BFAEEFA21E4B31BE00C097C8 /* Main.storyboard */,
+				BF8A01421E5DE48D00D8DCC4 /* UIView.swift */,
+				BF8A01401E5DDB5000D8DCC4 /* SnowboardViewController.swift */,
 				BF8A013A1E5964CD00D8DCC4 /* MapViewController.swift */,
 				BF8A012D1E57F61100D8DCC4 /* TwitterViewController.swift */,
-				BF8A013C1E59D2BF00D8DCC4 /* TwitterAPI.swift */,
 				BF8A013E1E59E07500D8DCC4 /* TimelineViewController.swift */,
 				BFAEEFA51E4B31BE00C097C8 /* Assets.xcassets */,
 				BFAEEFA71E4B31BE00C097C8 /* LaunchScreen.storyboard */,
@@ -378,12 +381,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF8A01431E5DE48D00D8DCC4 /* UIView.swift in Sources */,
 				BF8A012E1E57F61100D8DCC4 /* TwitterViewController.swift in Sources */,
 				BFAEEFA11E4B31BE00C097C8 /* ViewController.swift in Sources */,
 				BFAEEF9F1E4B31BE00C097C8 /* AppDelegate.swift in Sources */,
+				BF8A01411E5DDB5000D8DCC4 /* SnowboardViewController.swift in Sources */,
 				BF8A013B1E5964CD00D8DCC4 /* MapViewController.swift in Sources */,
 				BF8A013F1E59E07500D8DCC4 /* TimelineViewController.swift in Sources */,
-				BF8A013D1E59D2C000D8DCC4 /* TwitterAPI.swift in Sources */,
 				BF9CE0311E4B4C180033BFD8 /* LoadFile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

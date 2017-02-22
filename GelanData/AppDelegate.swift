@@ -10,9 +10,10 @@ import UIKit
 import GoogleMaps;
 import Fabric
 import TwitterKit
+import CoreLocation
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate,CLLocationManagerDelegate {
 
     var window: UIWindow?
     let cGoogleMapsAPIKey = "AIzaSyAB0vfMdryt9KtBtOOXKfZUr5YrjoI0q0k"
