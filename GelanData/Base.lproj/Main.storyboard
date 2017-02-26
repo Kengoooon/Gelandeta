@@ -146,7 +146,7 @@
                                 </userDefinedRuntimeAttributes>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TnP-gs-Exb">
-                                <rect key="frame" x="134" y="267" width="106" height="53"/>
+                                <rect key="frame" x="134" y="250" width="106" height="53"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="GPS取得"/>
@@ -162,7 +162,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="onClickGetLocationButton:" destination="lOo-f9-yM8" eventType="touchUpInside" id="vZU-Kh-esq"/>
+                                    <action selector="onClickGetLocationButton:" destination="lOo-f9-yM8" eventType="touchUpInside" id="yyA-Bp-VSL"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -195,13 +195,73 @@
                     <view key="view" tag="1" contentMode="scaleToFill" id="tOm-Dr-m9n">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="E9Z-tw-LCm">
+                                <rect key="frame" x="16" y="569" width="343" height="41"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gfa-iM-Oay">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="20.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="コース数" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kfW-bZ-9tu">
+                                                <rect key="frame" x="0.0" y="0.0" width="120" height="20.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="5Fc-lr-UPy"/>
+                                                    <constraint firstAttribute="width" constant="120" id="gOr-Sd-iyQ"/>
+                                                    <constraint firstAttribute="height" constant="20.5" id="rsD-Fn-Ah2"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ああああ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iHQ-Iq-5Ul">
+                                                <rect key="frame" x="120" y="0.0" width="223" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JSA-ZN-jWd">
+                                        <rect key="frame" x="0.0" y="20.5" width="343" height="20.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="コース難易度" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IXS-be-wXc">
+                                                <rect key="frame" x="0.0" y="0.0" width="120" height="20.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="20.5" id="O1V-6h-nWe"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IcA-QO-2aI">
+                                                <rect key="frame" x="120" y="0.0" width="223" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="IXS-be-wXc" firstAttribute="width" secondItem="kfW-bZ-9tu" secondAttribute="width" id="Fly-CL-sSl"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="QIl-ni-I3F" firstAttribute="top" secondItem="E9Z-tw-LCm" secondAttribute="bottom" constant="20" id="d41-77-m6S"/>
+                            <constraint firstItem="E9Z-tw-LCm" firstAttribute="leading" secondItem="tOm-Dr-m9n" secondAttribute="leadingMargin" id="ebt-wB-7By"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="E9Z-tw-LCm" secondAttribute="trailing" id="sU1-R5-gzN"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" tag="1" title="Map" image="default_marker.png" id="joz-mg-4Yx"/>
+                    <connections>
+                        <outlet property="gelandeInfoLabel" destination="E9Z-tw-LCm" id="Jvq-Po-u5j"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rjw-aI-wlG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-98" y="-178"/>
+            <point key="canvasLocation" x="-98.400000000000006" y="-178.56071964017991"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="2B4-O5-7zo">

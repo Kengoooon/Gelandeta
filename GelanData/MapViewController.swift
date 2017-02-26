@@ -16,12 +16,15 @@
 import UIKit
 import GoogleMaps
 import CoreLocation
+import Foundation
 
-class MapViewController: UIViewController, GMSMapViewDelegate,CLLocationManagerDelegate,UITabBarDelegate{
-    
+class MapViewController:UIViewController, GMSMapViewDelegate,CLLocationManagerDelegate,UITabBarDelegate{
+    @IBOutlet var gelandeInfoLabel: UIStackView!
+
     //ゲレンデ配列
     var csvGelandeArray:[String] = []
     var gelandeArray:[String] = []
+//    var courseArray:[String] = []
     var areaCount:Int = 0
     // 現在地の位置情報の取得にはCLLocationManagerを使用
     var locationManager: CLLocationManager!
@@ -45,6 +48,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate,CLLocationManagerD
         mapView.isMyLocationEnabled = true
         mapView.delegate = self
         self.view = mapView
+        view.addSubview(gelandeInfoLabel)
         
         if CLLocationManager.locationServicesEnabled() {
             print("GPS発動！！！")
@@ -62,6 +66,23 @@ class MapViewController: UIViewController, GMSMapViewDelegate,CLLocationManagerD
             locationManager.distanceFilter = 10
             // GPSの使用を開始する
             locationManager.startUpdatingLocation()
+            
+            //円グラフ
+            let pi = CGFloat(M_PI)
+            let start:CGFloat = 0.0 // 開始の角度
+            let end :CGFloat = pi * 2.0// 終了の角度
+            
+            let path: UIBezierPath = UIBezierPath();
+           // path.move(to: CGPoint(x:50, y:50))
+            path.addArc(withCenter: CGPoint(x:200, y:500), radius: 30, startAngle: start, endAngle: end, clockwise: true) // 円弧
+            
+            let layer = CAShapeLayer()
+            layer.fillColor = UIColor.orange.cgColor
+            layer.path = path.cgPath
+        
+            self.view.layer.addSublayer(layer)
+            
+            
         }
         
         //ゲレンデデータの読み込み関数
@@ -71,15 +92,49 @@ class MapViewController: UIViewController, GMSMapViewDelegate,CLLocationManagerD
             let marker = GMSMarker()
             marker.position = CLLocationCoordinate2DMake(Double(gelandeArray[3])!, Double(gelandeArray[4])!)
             marker.title = String(gelandeArray[1])!
-            marker.snippet = String(gelandeArray[5])!
+            marker.snippet = String(String(gelandeArray[5])! + "\n" + String(gelandeArray[6])! + "\n" + String(gelandeArray[7])! + "\n" + String(gelandeArray[8])! + "\n" + String(gelandeArray[9])!)
+            
             marker.map = mapView
             areaCount += 1
+            
         }
         
         for _ in 0..<csvGelandeArray.count - 1{
             nextGerande()
         }
         
+        
+    }
+    
+    func mapView(_ mapView: GMSMapView, didTapInfoWindowOf didTapInfoWindowOfMarker: GMSMarker){
+        // ユーザーに関わる処理
+        print("タップイベント")
+
+        let courseArray:[String] = String(didTapInfoWindowOfMarker.snippet!).components(separatedBy: "\n")        
+        print(courseArray[0])
+        print(courseArray)
+        
+        let url = NSURL(string: courseArray[0])
+        if #available(iOS 10.0, *) {
+            UIApplication.shared.open(url as! URL, options: [:], completionHandler: nil)
+        } else {
+            if UIApplication.shared.canOpenURL(url! as URL){
+                UIApplication.shared.openURL(url! as URL)
+            }
+        }
+        //タップしたゲレンデのコース難易度グラフ生成
+        let pi = CGFloat(M_PI)
+        let start:CGFloat = 0.0 // 開始の角度
+        let end :CGFloat = pi * 2.0// 終了の角度
+        
+        let path: UIBezierPath = UIBezierPath();
+        path.addArc(withCenter: CGPoint(x:200, y:500), radius: 30, startAngle: start, endAngle: end, clockwise: true) // 円弧
+        
+        let layer = CAShapeLayer()
+        layer.fillColor = UIColor.orange.cgColor
+        layer.path = path.cgPath
+        
+        self.view.layer.addSublayer(layer)
         
     }
     
@@ -101,9 +156,6 @@ class MapViewController: UIViewController, GMSMapViewDelegate,CLLocationManagerD
             print("更新")
             return
         }
-        
-        //  self.latTextField.text = "".appendingFormat("%.4f", newLocation.coordinate.latitude)
-        //   self.lngTextField.text = "".appendingFormat("%.4f", newLocation.coordinate.longitude)
     }
     
     func locationManager(manager: CLLocationManager, didUpdateToLocation newLocation: CLLocation, fromLocation oldLocation: CLLocation){
@@ -124,18 +176,6 @@ class MapViewController: UIViewController, GMSMapViewDelegate,CLLocationManagerD
         NSLog("ErrorErrorErrorErrorError")
     }
     
-    func mapView(_ mapView: GMSMapView, didTapInfoWindowOf didTapInfoWindowOfMarker: GMSMarker){
-        // ユーザーに関わる処理
-        print("タップイベント")
-        let url = NSURL(string: String(gelandeArray[5])!)
-        if #available(iOS 10.0, *) {
-            UIApplication.shared.open(url as! URL, options: [:], completionHandler: nil)
-        } else {
-            if UIApplication.shared.canOpenURL(url! as URL){
-                UIApplication.shared.openURL(url! as URL)
-            }
-        }
-    }
     func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
         print("You tapped at \(coordinate.latitude), \(coordinate.longitude)")
     }

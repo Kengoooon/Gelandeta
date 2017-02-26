@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		350EFDF959F7C6A46986E1FA /* libPods-GelanData.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AA76C290FCECFCC223D736F /* libPods-GelanData.a */; };
+		4592A229F3C09B1076D1D625 /* Pods_GelanDataTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 169EE24D4FD5C6B91D3A0CA1 /* Pods_GelanDataTests.framework */; };
+		9DFC48591ED6713B57057401 /* Pods_GelanDataUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 557E7F156CCAB94A76120EF0 /* Pods_GelanDataUITests.framework */; };
 		BF8A012C1E57396800D8DCC4 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF8A012B1E57396800D8DCC4 /* CoreLocation.framework */; };
 		BF8A012E1E57F61100D8DCC4 /* TwitterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8A012D1E57F61100D8DCC4 /* TwitterViewController.swift */; };
 		BF8A01341E59386F00D8DCC4 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF8A01301E59386F00D8DCC4 /* Fabric.framework */; };
@@ -28,6 +29,7 @@
 		BFAEEFA91E4B31BE00C097C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFAEEFA71E4B31BE00C097C8 /* LaunchScreen.storyboard */; };
 		BFAEEFB41E4B31BF00C097C8 /* GelanDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAEEFB31E4B31BF00C097C8 /* GelanDataTests.swift */; };
 		BFAEEFBF1E4B31BF00C097C8 /* GelanDataUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAEEFBE1E4B31BF00C097C8 /* GelanDataUITests.swift */; };
+		E88B306C4FDA0217DE05ACFF /* Pods_GelanData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAB02A2DAC8734D9F948A91A /* Pods_GelanData.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,9 +50,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		277229AC31B50B511FEF1B20 /* Pods-GelanData.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GelanData.release.xcconfig"; path = "Pods/Target Support Files/Pods-GelanData/Pods-GelanData.release.xcconfig"; sourceTree = "<group>"; };
-		3AA76C290FCECFCC223D736F /* libPods-GelanData.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GelanData.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5548C366BB2648E3C842C02D /* Pods-GelanData.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GelanData.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GelanData/Pods-GelanData.debug.xcconfig"; sourceTree = "<group>"; };
+		09FF09062671ED9696171250 /* Pods-GelanData.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GelanData.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GelanData/Pods-GelanData.debug.xcconfig"; sourceTree = "<group>"; };
+		169EE24D4FD5C6B91D3A0CA1 /* Pods_GelanDataTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GelanDataTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		557E7F156CCAB94A76120EF0 /* Pods_GelanDataUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GelanDataUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		59F2C89CFC1F2C3A7C28942A /* Pods-GelanDataTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GelanDataTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GelanDataTests/Pods-GelanDataTests.debug.xcconfig"; sourceTree = "<group>"; };
+		AA4B105292758CD0EF1F7106 /* Pods-GelanDataUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GelanDataUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GelanDataUITests/Pods-GelanDataUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		AAB02A2DAC8734D9F948A91A /* Pods_GelanData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GelanData.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBB75862F1896F1EBA7425E4 /* Pods-GelanDataUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GelanDataUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GelanDataUITests/Pods-GelanDataUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BF8A012B1E57396800D8DCC4 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		BF8A012D1E57F61100D8DCC4 /* TwitterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterViewController.swift; sourceTree = "<group>"; };
 		BF8A01301E59386F00D8DCC4 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = SOURCE_ROOT; };
@@ -77,6 +83,8 @@
 		BFAEEFBA1E4B31BF00C097C8 /* GelanDataUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GelanDataUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFAEEFBE1E4B31BF00C097C8 /* GelanDataUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GelanDataUITests.swift; sourceTree = "<group>"; };
 		BFAEEFC01E4B31BF00C097C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CCDDE5CDA02550DD3F9E7A30 /* Pods-GelanDataTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GelanDataTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GelanDataTests/Pods-GelanDataTests.release.xcconfig"; sourceTree = "<group>"; };
+		EE4179544097E9A0598DA1A6 /* Pods-GelanData.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GelanData.release.xcconfig"; path = "Pods/Target Support Files/Pods-GelanData/Pods-GelanData.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,9 +94,9 @@
 			files = (
 				BF8A01371E59386F00D8DCC4 /* TwitterCore.framework in Frameworks */,
 				BF8A012C1E57396800D8DCC4 /* CoreLocation.framework in Frameworks */,
-				350EFDF959F7C6A46986E1FA /* libPods-GelanData.a in Frameworks */,
 				BF8A01341E59386F00D8DCC4 /* Fabric.framework in Frameworks */,
 				BF8A01351E59386F00D8DCC4 /* TwitterKit.framework in Frameworks */,
+				E88B306C4FDA0217DE05ACFF /* Pods_GelanData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4592A229F3C09B1076D1D625 /* Pods_GelanDataTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,6 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DFC48591ED6713B57057401 /* Pods_GelanDataUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,16 +123,22 @@
 			isa = PBXGroup;
 			children = (
 				BF8A012B1E57396800D8DCC4 /* CoreLocation.framework */,
-				3AA76C290FCECFCC223D736F /* libPods-GelanData.a */,
+				AAB02A2DAC8734D9F948A91A /* Pods_GelanData.framework */,
+				169EE24D4FD5C6B91D3A0CA1 /* Pods_GelanDataTests.framework */,
+				557E7F156CCAB94A76120EF0 /* Pods_GelanDataUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		717ABE658A946D5D49537155 /* Pods */ = {
+		938FFCCE655B3409944C6CBF /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				5548C366BB2648E3C842C02D /* Pods-GelanData.debug.xcconfig */,
-				277229AC31B50B511FEF1B20 /* Pods-GelanData.release.xcconfig */,
+				09FF09062671ED9696171250 /* Pods-GelanData.debug.xcconfig */,
+				EE4179544097E9A0598DA1A6 /* Pods-GelanData.release.xcconfig */,
+				59F2C89CFC1F2C3A7C28942A /* Pods-GelanDataTests.debug.xcconfig */,
+				CCDDE5CDA02550DD3F9E7A30 /* Pods-GelanDataTests.release.xcconfig */,
+				AA4B105292758CD0EF1F7106 /* Pods-GelanDataUITests.debug.xcconfig */,
+				BBB75862F1896F1EBA7425E4 /* Pods-GelanDataUITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -134,8 +150,8 @@
 				BFAEEFB21E4B31BF00C097C8 /* GelanDataTests */,
 				BFAEEFBD1E4B31BF00C097C8 /* GelanDataUITests */,
 				BFAEEF9C1E4B31BE00C097C8 /* Products */,
-				717ABE658A946D5D49537155 /* Pods */,
 				252306DD9C97AACFE101AACA /* Frameworks */,
+				938FFCCE655B3409944C6CBF /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -152,22 +168,22 @@
 		BFAEEF9D1E4B31BE00C097C8 /* GelanData */ = {
 			isa = PBXGroup;
 			children = (
-				BFAEEF9E1E4B31BE00C097C8 /* AppDelegate.swift */,
 				BF8A01301E59386F00D8DCC4 /* Fabric.framework */,
 				BF8A01311E59386F00D8DCC4 /* TwitterKit.framework */,
 				BF8A01321E59386F00D8DCC4 /* TwitterKitResources.bundle */,
 				BF8A01331E59386F00D8DCC4 /* TwitterCore.framework */,
+				BFAEEFA21E4B31BE00C097C8 /* Main.storyboard */,
+				BFAEEFA71E4B31BE00C097C8 /* LaunchScreen.storyboard */,
+				BFAEEF9E1E4B31BE00C097C8 /* AppDelegate.swift */,
+				BF8A01421E5DE48D00D8DCC4 /* UIView.swift */,
 				BFAEEFA01E4B31BE00C097C8 /* ViewController.swift */,
 				BF9CE0301E4B4C180033BFD8 /* LoadFile.swift */,
-				BF9CE02E1E4B42EB0033BFD8 /* gelande.csv */,
-				BFAEEFA21E4B31BE00C097C8 /* Main.storyboard */,
-				BF8A01421E5DE48D00D8DCC4 /* UIView.swift */,
 				BF8A01401E5DDB5000D8DCC4 /* SnowboardViewController.swift */,
 				BF8A013A1E5964CD00D8DCC4 /* MapViewController.swift */,
 				BF8A012D1E57F61100D8DCC4 /* TwitterViewController.swift */,
 				BF8A013E1E59E07500D8DCC4 /* TimelineViewController.swift */,
 				BFAEEFA51E4B31BE00C097C8 /* Assets.xcassets */,
-				BFAEEFA71E4B31BE00C097C8 /* LaunchScreen.storyboard */,
+				BF9CE02E1E4B42EB0033BFD8 /* gelande.csv */,
 				BFAEEFAA1E4B31BE00C097C8 /* Info.plist */,
 				BF8A01381E59609200D8DCC4 /* twitter.png */,
 			);
@@ -199,12 +215,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BFAEEFC31E4B31BF00C097C8 /* Build configuration list for PBXNativeTarget "GelanData" */;
 			buildPhases = (
-				F16B5FEFFB1C70D14A94B3CF /* Check Pods Manifest.lock */,
+				16ADE0BFBC46EE322B1EBE6C /* [CP] Check Pods Manifest.lock */,
 				BFAEEF971E4B31BE00C097C8 /* Sources */,
 				BFAEEF981E4B31BE00C097C8 /* Frameworks */,
 				BFAEEF991E4B31BE00C097C8 /* Resources */,
-				D423A9E3C3492726A33BD6EE /* Copy Pods Resources */,
 				BF8A012F1E57F84900D8DCC4 /* ShellScript */,
+				528566B9776AF350B0EDB712 /* [CP] Embed Pods Frameworks */,
+				62AE6C4786110A970841A7BA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -219,9 +236,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BFAEEFC61E4B31BF00C097C8 /* Build configuration list for PBXNativeTarget "GelanDataTests" */;
 			buildPhases = (
+				C5E530AC0FAF6EE69D5D7F36 /* [CP] Check Pods Manifest.lock */,
 				BFAEEFAB1E4B31BF00C097C8 /* Sources */,
 				BFAEEFAC1E4B31BF00C097C8 /* Frameworks */,
 				BFAEEFAD1E4B31BF00C097C8 /* Resources */,
+				55FA06224AD4079FDCC1F152 /* [CP] Embed Pods Frameworks */,
+				2476C64F06F74DDEC7313FB8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -237,9 +257,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BFAEEFC91E4B31BF00C097C8 /* Build configuration list for PBXNativeTarget "GelanDataUITests" */;
 			buildPhases = (
+				C3B5AB777F7ACC22C6621633 /* [CP] Check Pods Manifest.lock */,
 				BFAEEFB61E4B31BF00C097C8 /* Sources */,
 				BFAEEFB71E4B31BF00C097C8 /* Frameworks */,
 				BFAEEFB81E4B31BF00C097C8 /* Resources */,
+				0C91F8913A01522DEEEAC48A /* [CP] Embed Pods Frameworks */,
+				1D4B7204A1655E17928DE12F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -331,6 +354,111 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0C91F8913A01522DEEEAC48A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GelanDataUITests/Pods-GelanDataUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		16ADE0BFBC46EE322B1EBE6C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		1D4B7204A1655E17928DE12F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GelanDataUITests/Pods-GelanDataUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2476C64F06F74DDEC7313FB8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GelanDataTests/Pods-GelanDataTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		528566B9776AF350B0EDB712 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GelanData/Pods-GelanData-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		55FA06224AD4079FDCC1F152 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GelanDataTests/Pods-GelanDataTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		62AE6C4786110A970841A7BA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GelanData/Pods-GelanData-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		BF8A012F1E57F84900D8DCC4 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -344,34 +472,34 @@
 			shellPath = /bin/sh;
 			shellScript = "./Fabric.framework/run c6d315502ab7c83aaf52d6e8f57717929b5882c8 503536513a7ec487fbd6a14b24d09203481ab1b78ebf6b97bb15c4971ac63749";
 		};
-		D423A9E3C3492726A33BD6EE /* Copy Pods Resources */ = {
+		C3B5AB777F7ACC22C6621633 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GelanData/Pods-GelanData-resources.sh\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		F16B5FEFFB1C70D14A94B3CF /* Check Pods Manifest.lock */ = {
+		C5E530AC0FAF6EE69D5D7F36 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -536,7 +664,7 @@
 		};
 		BFAEEFC41E4B31BF00C097C8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5548C366BB2648E3C842C02D /* Pods-GelanData.debug.xcconfig */;
+			baseConfigurationReference = 09FF09062671ED9696171250 /* Pods-GelanData.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = ME2P39A3QN;
@@ -556,7 +684,7 @@
 		};
 		BFAEEFC51E4B31BF00C097C8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 277229AC31B50B511FEF1B20 /* Pods-GelanData.release.xcconfig */;
+			baseConfigurationReference = EE4179544097E9A0598DA1A6 /* Pods-GelanData.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = ME2P39A3QN;
@@ -576,6 +704,7 @@
 		};
 		BFAEEFC71E4B31BF00C097C8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 59F2C89CFC1F2C3A7C28942A /* Pods-GelanDataTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -591,6 +720,7 @@
 		};
 		BFAEEFC81E4B31BF00C097C8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CCDDE5CDA02550DD3F9E7A30 /* Pods-GelanDataTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -606,6 +736,7 @@
 		};
 		BFAEEFCA1E4B31BF00C097C8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA4B105292758CD0EF1F7106 /* Pods-GelanDataUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = ME2P39A3QN;
@@ -620,6 +751,7 @@
 		};
 		BFAEEFCB1E4B31BF00C097C8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BBB75862F1896F1EBA7425E4 /* Pods-GelanDataUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = ME2P39A3QN;

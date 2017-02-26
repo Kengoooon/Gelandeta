@@ -14,11 +14,11 @@ class SnowboardViewController: UIViewController,CLLocationManagerDelegate{
     @IBOutlet weak var longitudeLabel: UILabel!
     @IBOutlet weak var getLocationButton: UIButton!
     
-     var myLocationManager: CLLocationManager!
-
+    var myLocationManager: CLLocationManager!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         let status = CLLocationManager.authorizationStatus()
         if status == CLAuthorizationStatus.restricted || status == CLAuthorizationStatus.denied {
             return
@@ -37,7 +37,6 @@ class SnowboardViewController: UIViewController,CLLocationManagerDelegate{
         
         myLocationManager.desiredAccuracy = kCLLocationAccuracyBest
         myLocationManager.distanceFilter = kCLDistanceFilterNone
-        
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -49,15 +48,14 @@ class SnowboardViewController: UIViewController,CLLocationManagerDelegate{
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print("error")
     }
+    
     @IBAction func onClickGetLocationButton(_ sender: UIButton) {
-         myLocationManager.requestLocation()
+        myLocationManager.requestLocation()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-    
 
 
 }
