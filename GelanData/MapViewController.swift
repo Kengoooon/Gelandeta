@@ -20,11 +20,11 @@ import Foundation
 
 class MapViewController:UIViewController, GMSMapViewDelegate,CLLocationManagerDelegate,UITabBarDelegate{
     @IBOutlet var gelandeInfoLabel: UIStackView!
+    @IBOutlet var courseCountLabel: UILabel!
 
     //ゲレンデ配列
     var csvGelandeArray:[String] = []
     var gelandeArray:[String] = []
-//    var courseArray:[String] = []
     var areaCount:Int = 0
     // 現在地の位置情報の取得にはCLLocationManagerを使用
     var locationManager: CLLocationManager!
@@ -35,6 +35,8 @@ class MapViewController:UIViewController, GMSMapViewDelegate,CLLocationManagerDe
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        nighterImageView.isHidden = true
+        gelandeInfoLabel.isHidden = true
         
         //CSVファイルからゲレンデデータを読み込み
         let loadFile = LoadFile()
@@ -67,22 +69,6 @@ class MapViewController:UIViewController, GMSMapViewDelegate,CLLocationManagerDe
             // GPSの使用を開始する
             locationManager.startUpdatingLocation()
             
-            //円グラフ
-            let pi = CGFloat(M_PI)
-            let start:CGFloat = 0.0 // 開始の角度
-            let end :CGFloat = pi * 2.0// 終了の角度
-            
-            let path: UIBezierPath = UIBezierPath();
-           // path.move(to: CGPoint(x:50, y:50))
-            path.addArc(withCenter: CGPoint(x:200, y:500), radius: 30, startAngle: start, endAngle: end, clockwise: true) // 円弧
-            
-            let layer = CAShapeLayer()
-            layer.fillColor = UIColor.orange.cgColor
-            layer.path = path.cgPath
-        
-            self.view.layer.addSublayer(layer)
-            
-            
         }
         
         //ゲレンデデータの読み込み関数
@@ -92,8 +78,7 @@ class MapViewController:UIViewController, GMSMapViewDelegate,CLLocationManagerDe
             let marker = GMSMarker()
             marker.position = CLLocationCoordinate2DMake(Double(gelandeArray[3])!, Double(gelandeArray[4])!)
             marker.title = String(gelandeArray[1])!
-            marker.snippet = String(String(gelandeArray[5])! + "\n" + String(gelandeArray[6])! + "\n" + String(gelandeArray[7])! + "\n" + String(gelandeArray[8])! + "\n" + String(gelandeArray[9])!)
-            
+            marker.snippet = String(String(gelandeArray[5])! + "\n" + String(gelandeArray[6])! + "\n" + String(gelandeArray[7])! + "\n" + String(gelandeArray[8])! + "\n" + String(gelandeArray[9])! + "\n" + String(gelandeArray[10])!)
             marker.map = mapView
             areaCount += 1
             
@@ -109,11 +94,58 @@ class MapViewController:UIViewController, GMSMapViewDelegate,CLLocationManagerDe
     func mapView(_ mapView: GMSMapView, didTapInfoWindowOf didTapInfoWindowOfMarker: GMSMarker){
         // ユーザーに関わる処理
         print("タップイベント")
-
-        let courseArray:[String] = String(didTapInfoWindowOfMarker.snippet!).components(separatedBy: "\n")        
-        print(courseArray[0])
-        print(courseArray)
+        //snipperの値を改行区切りで配列に格納
+        var courseArray:[String] = String(didTapInfoWindowOfMarker.snippet!).components(separatedBy: "\n")
         
+        //タップしたゲレンデのコース難易度グラフ生成
+        let pieChartView = PieChartView()
+        pieChartView.frame = CGRect(x: 0, y: 500, width: view.frame.size.width, height: 100)
+        
+        pieChartView.segments = [
+            Segment(color: UIColor.red, value: CGFloat(Int(courseArray[2])!)),
+            Segment(color: UIColor.green, value: CGFloat(Int(courseArray[3])!)),
+            Segment(color: UIColor.blue, value: CGFloat(Int(courseArray[4])!))
+        ]
+        view.addSubview(pieChartView)
+        
+        //タップしたゲレンデのコース数を表示
+        gelandeInfoLabel.isHidden = false
+        courseCountLabel.text = courseArray[1]
+        view.addSubview(gelandeInfoLabel)
+        
+        
+        //ナイターの可否を表示(デフォルトではOffを設定)
+        
+        var image1:UIImage? = UIImage(named:"")
+        var imageView: UIImageView = UIImageView(image: image1)
+        print(courseArray[5])
+        if String(courseArray[5])! == "1"{
+            image1 = UIImage(named:"nighterOn.png")!
+            imageView = UIImageView(image:image1)
+        }else{
+            image1 = UIImage(named:"nighterOff.png")!
+            imageView = UIImageView(image:image1)
+        }
+        
+        // 画面の横幅を取得
+        let screenWidth:CGFloat = view.frame.size.width
+        let screenHeight:CGFloat = view.frame.size.height
+        
+        // 画像の中心を画面の中心に設定
+        let rect:CGRect = CGRect(x:0, y:0, width:80, height:80)
+        imageView.frame = rect;
+        imageView.center = CGPoint(x:screenWidth/2 + 100, y:screenHeight/2 + 220)
+        
+        // UIImageViewのインスタンスをビューに追加
+        self.view.addSubview(imageView)
+        
+        
+    }
+    func mapView(_ mapView: GMSMapView, didLongPressInfoWindowOf : GMSMarker){
+        // ユーザーに関わる処理
+        print("ロングタップイベント")
+        //snipperの値を改行区切りで配列に格納
+        var courseArray:[String] = String(didLongPressInfoWindowOf.snippet!).components(separatedBy: "\n")
         let url = NSURL(string: courseArray[0])
         if #available(iOS 10.0, *) {
             UIApplication.shared.open(url as! URL, options: [:], completionHandler: nil)
@@ -122,21 +154,10 @@ class MapViewController:UIViewController, GMSMapViewDelegate,CLLocationManagerDe
                 UIApplication.shared.openURL(url! as URL)
             }
         }
-        //タップしたゲレンデのコース難易度グラフ生成
-        let pi = CGFloat(M_PI)
-        let start:CGFloat = 0.0 // 開始の角度
-        let end :CGFloat = pi * 2.0// 終了の角度
-        
-        let path: UIBezierPath = UIBezierPath();
-        path.addArc(withCenter: CGPoint(x:200, y:500), radius: 30, startAngle: start, endAngle: end, clockwise: true) // 円弧
-        
-        let layer = CAShapeLayer()
-        layer.fillColor = UIColor.orange.cgColor
-        layer.path = path.cgPath
-        
-        self.view.layer.addSublayer(layer)
-        
+
     }
+    
+    
     
     //ユーザが位置情報の使用を許可しているか確認
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {

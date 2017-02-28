@@ -29,6 +29,9 @@
 		BFAEEFA91E4B31BE00C097C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFAEEFA71E4B31BE00C097C8 /* LaunchScreen.storyboard */; };
 		BFAEEFB41E4B31BF00C097C8 /* GelanDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAEEFB31E4B31BF00C097C8 /* GelanDataTests.swift */; };
 		BFAEEFBF1E4B31BF00C097C8 /* GelanDataUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAEEFBE1E4B31BF00C097C8 /* GelanDataUITests.swift */; };
+		BFDBE6561E62BC0B00F3A659 /* PieChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDBE6551E62BC0A00F3A659 /* PieChartView.swift */; };
+		BFDBE6611E632B5C00F3A659 /* nighterOn.png in Resources */ = {isa = PBXBuildFile; fileRef = BFDBE65F1E632B5C00F3A659 /* nighterOn.png */; };
+		BFDBE6621E632B5C00F3A659 /* nighterOff.png in Resources */ = {isa = PBXBuildFile; fileRef = BFDBE6601E632B5C00F3A659 /* nighterOff.png */; };
 		E88B306C4FDA0217DE05ACFF /* Pods_GelanData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAB02A2DAC8734D9F948A91A /* Pods_GelanData.framework */; };
 /* End PBXBuildFile section */
 
@@ -83,6 +86,9 @@
 		BFAEEFBA1E4B31BF00C097C8 /* GelanDataUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GelanDataUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFAEEFBE1E4B31BF00C097C8 /* GelanDataUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GelanDataUITests.swift; sourceTree = "<group>"; };
 		BFAEEFC01E4B31BF00C097C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFDBE6551E62BC0A00F3A659 /* PieChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieChartView.swift; sourceTree = "<group>"; };
+		BFDBE65F1E632B5C00F3A659 /* nighterOn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = nighterOn.png; path = ../../nighterOn.png; sourceTree = "<group>"; };
+		BFDBE6601E632B5C00F3A659 /* nighterOff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = nighterOff.png; path = ../../nighterOff.png; sourceTree = "<group>"; };
 		CCDDE5CDA02550DD3F9E7A30 /* Pods-GelanDataTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GelanDataTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GelanDataTests/Pods-GelanDataTests.release.xcconfig"; sourceTree = "<group>"; };
 		EE4179544097E9A0598DA1A6 /* Pods-GelanData.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GelanData.release.xcconfig"; path = "Pods/Target Support Files/Pods-GelanData/Pods-GelanData.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -180,7 +186,10 @@
 				BF9CE0301E4B4C180033BFD8 /* LoadFile.swift */,
 				BF8A01401E5DDB5000D8DCC4 /* SnowboardViewController.swift */,
 				BF8A013A1E5964CD00D8DCC4 /* MapViewController.swift */,
+				BFDBE6551E62BC0A00F3A659 /* PieChartView.swift */,
 				BF8A012D1E57F61100D8DCC4 /* TwitterViewController.swift */,
+				BFDBE65F1E632B5C00F3A659 /* nighterOn.png */,
+				BFDBE6601E632B5C00F3A659 /* nighterOff.png */,
 				BF8A013E1E59E07500D8DCC4 /* TimelineViewController.swift */,
 				BFAEEFA51E4B31BE00C097C8 /* Assets.xcassets */,
 				BF9CE02E1E4B42EB0033BFD8 /* gelande.csv */,
@@ -329,9 +338,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFAEEFA91E4B31BE00C097C8 /* LaunchScreen.storyboard in Resources */,
+				BFDBE6611E632B5C00F3A659 /* nighterOn.png in Resources */,
 				BF9CE02F1E4B42EB0033BFD8 /* gelande.csv in Resources */,
 				BFAEEFA61E4B31BE00C097C8 /* Assets.xcassets in Resources */,
 				BF8A01391E59609200D8DCC4 /* twitter.png in Resources */,
+				BFDBE6621E632B5C00F3A659 /* nighterOff.png in Resources */,
 				BFAEEFA41E4B31BE00C097C8 /* Main.storyboard in Resources */,
 				BF8A01361E59386F00D8DCC4 /* TwitterKitResources.bundle in Resources */,
 			);
@@ -509,6 +520,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFDBE6561E62BC0B00F3A659 /* PieChartView.swift in Sources */,
 				BF8A01431E5DE48D00D8DCC4 /* UIView.swift in Sources */,
 				BF8A012E1E57F61100D8DCC4 /* TwitterViewController.swift in Sources */,
 				BFAEEFA11E4B31BE00C097C8 /* ViewController.swift in Sources */,

@@ -22,7 +22,7 @@ class TimelineViewController: TWTRTimelineViewController {
         Twitter.sharedInstance().logIn { session, error in
             if (session != nil) {
                 // ユーザ名からタイムラインを取得
-                self.dataSource = TWTRUserTimelineDataSource(screenName: session!.userName, apiClient: client)
+                //self.dataSource = TWTRUserTimelineDataSource(screenName: session!.userName, apiClient: client)
             } else {
                 print("error: \(error!.localizedDescription)")
             }
