@@ -30,4 +30,5 @@ class TimelineViewController: TWTRTimelineViewController {
         self.dataSource = TWTRSearchTimelineDataSource(searchQuery: "#スキー場", apiClient: client)
 
     }
+    
 }

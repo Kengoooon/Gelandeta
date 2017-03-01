@@ -21,7 +21,7 @@ import Foundation
 class MapViewController:UIViewController, GMSMapViewDelegate,CLLocationManagerDelegate,UITabBarDelegate{
     @IBOutlet var gelandeInfoLabel: UIStackView!
     @IBOutlet var courseCountLabel: UILabel!
-
+    @IBOutlet var nighterImageView: UIImageView!
     //ゲレンデ配列
     var csvGelandeArray:[String] = []
     var gelandeArray:[String] = []
@@ -35,9 +35,8 @@ class MapViewController:UIViewController, GMSMapViewDelegate,CLLocationManagerDe
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        nighterImageView.isHidden = true
         gelandeInfoLabel.isHidden = true
-        
+
         //CSVファイルからゲレンデデータを読み込み
         let loadFile = LoadFile()
         csvGelandeArray = loadFile.loadCSV("gelande")
@@ -49,8 +48,10 @@ class MapViewController:UIViewController, GMSMapViewDelegate,CLLocationManagerDe
         var mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
         mapView.isMyLocationEnabled = true
         mapView.delegate = self
-        self.view = mapView
-        view.addSubview(gelandeInfoLabel)
+        mapView.frame = self.view.bounds
+        mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        self.view.insertSubview(mapView,at:0)
+        mapView.addSubview(gelandeInfoLabel)
         
         if CLLocationManager.locationServicesEnabled() {
             print("GPS発動！！！")
@@ -81,13 +82,11 @@ class MapViewController:UIViewController, GMSMapViewDelegate,CLLocationManagerDe
             marker.snippet = String(String(gelandeArray[5])! + "\n" + String(gelandeArray[6])! + "\n" + String(gelandeArray[7])! + "\n" + String(gelandeArray[8])! + "\n" + String(gelandeArray[9])! + "\n" + String(gelandeArray[10])!)
             marker.map = mapView
             areaCount += 1
-            
-        }
+            }
         
         for _ in 0..<csvGelandeArray.count - 1{
             nextGerande()
         }
-        
         
     }
     
@@ -114,31 +113,12 @@ class MapViewController:UIViewController, GMSMapViewDelegate,CLLocationManagerDe
         view.addSubview(gelandeInfoLabel)
         
         
-        //ナイターの可否を表示(デフォルトではOffを設定)
-        
-        var image1:UIImage? = UIImage(named:"")
-        var imageView: UIImageView = UIImageView(image: image1)
-        print(courseArray[5])
+        //ナイターの可否を表示
         if String(courseArray[5])! == "1"{
-            image1 = UIImage(named:"nighterOn.png")!
-            imageView = UIImageView(image:image1)
+            nighterImageView.image = UIImage(named:"nighterOn.png")
         }else{
-            image1 = UIImage(named:"nighterOff.png")!
-            imageView = UIImageView(image:image1)
+            nighterImageView.image = UIImage(named:"nighterOff.png")
         }
-        
-        // 画面の横幅を取得
-        let screenWidth:CGFloat = view.frame.size.width
-        let screenHeight:CGFloat = view.frame.size.height
-        
-        // 画像の中心を画面の中心に設定
-        let rect:CGRect = CGRect(x:0, y:0, width:80, height:80)
-        imageView.frame = rect;
-        imageView.center = CGPoint(x:screenWidth/2 + 100, y:screenHeight/2 + 220)
-        
-        // UIImageViewのインスタンスをビューに追加
-        self.view.addSubview(imageView)
-        
         
     }
     func mapView(_ mapView: GMSMapView, didLongPressInfoWindowOf : GMSMarker){
@@ -156,8 +136,6 @@ class MapViewController:UIViewController, GMSMapViewDelegate,CLLocationManagerDe
         }
 
     }
-    
-    
     
     //ユーザが位置情報の使用を許可しているか確認
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {

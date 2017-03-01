@@ -28,7 +28,6 @@ class TwitterViewController: UIViewController {
         })
         loginButton.center = self.view.center
         self.view.addSubview(loginButton)
-
     }
     
 
