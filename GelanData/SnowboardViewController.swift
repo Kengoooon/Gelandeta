@@ -11,16 +11,6 @@ import CoreLocation
 
 class SnowboardViewController: UIViewController,CLLocationManagerDelegate{
     
-    //クラス間で共有する変数
-    struct gelandeConditions{
-        var course: String = ""
-        var nighter: String = ""
-        var bigginer: String = ""
-        var middle: String = ""
-        var hard: String = ""
-        var liftchicket: String = ""
-    }
-    
     @IBOutlet weak var latitudeLabel: UILabel!
     @IBOutlet weak var longitudeLabel: UILabel!
     @IBOutlet weak var getLocationButton: UIButton!
@@ -76,8 +66,6 @@ class SnowboardViewController: UIViewController,CLLocationManagerDelegate{
         gradientLayer.endPoint = CGPoint(x:1.0,y:0.8);
         //headerviewにグラデーションレイヤーを挿入
         backgroundView.layer.insertSublayer(gradientLayer,at:0)
-
-        
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
