@@ -9,22 +9,27 @@
 import UIKit
 import CoreLocation
 
-//let 現在地の緯度: Double = 135.5258549
-//let 現在地の経度: Double = 34.6873527
-//let 行き先の緯度: Double = 139.75313186645508
-//let 行き先の経度: Double = 35.68525668970075
-//let 現在地の位置情報: CLLocation = CLLocation(latitude: 現在地の緯度, longitude: 現在地の経度)
-//let 行き先の位置情報: CLLocation = CLLocation(latitude: 行き先の緯度, longitude: 行き先の経度)
-//距離 = 行き先の位置情報.distanceFromLocation(現在地の位置情報)
-
-
 class SnowboardViewController: UIViewController,CLLocationManagerDelegate{
+    
+    //クラス間で共有する変数
+    struct gelandeConditions{
+        var course: String = ""
+        var nighter: String = ""
+        var bigginer: String = ""
+        var middle: String = ""
+        var hard: String = ""
+        var liftchicket: String = ""
+    }
+    
     @IBOutlet weak var latitudeLabel: UILabel!
     @IBOutlet weak var longitudeLabel: UILabel!
     @IBOutlet weak var getLocationButton: UIButton!
     @IBOutlet weak var latitudeLabelEnd: UILabel!
     @IBOutlet weak var longitudeLabelEnd: UILabel!
     @IBOutlet weak var resultLabel: UILabel!
+    @IBOutlet weak var totalrunsLabel: UILabel!
+    @IBOutlet weak var totalcaloriesLabel: UILabel!
+    @IBOutlet weak var backgroundView: UIView!
     
     var myLocationManager: CLLocationManager!
     var myLocationManager2: CLLocationManager!
@@ -55,6 +60,24 @@ class SnowboardViewController: UIViewController,CLLocationManagerDelegate{
         
         myLocationManager.desiredAccuracy = kCLLocationAccuracyBest
         myLocationManager.distanceFilter = kCLDistanceFilterNone
+        
+        //グラデーションの設定
+        let gradientLayer = CAGradientLayer()
+        //フレームを用意
+        gradientLayer.frame = backgroundView.bounds
+        //色を定義
+        let color1 = UIColor(red: 0.4, green: 0.7, blue: 0.9, alpha: 1.0).cgColor as CGColor
+        let color2 = UIColor(red: 0.1, green: 0.5, blue: 0.8, alpha: 1.0).cgColor as CGColor
+        let color3 = UIColor.white.cgColor
+        //グラデーションレイヤーに色を設定
+        gradientLayer.colors = [color1, color2,color3]
+        //始点・終点の設定
+        gradientLayer.startPoint = CGPoint(x:0,y:0);
+        gradientLayer.endPoint = CGPoint(x:1.0,y:0.8);
+        //headerviewにグラデーションレイヤーを挿入
+        backgroundView.layer.insertSublayer(gradientLayer,at:0)
+
+        
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -63,14 +86,19 @@ class SnowboardViewController: UIViewController,CLLocationManagerDelegate{
                 latitudeLabel.text = "緯度：\(location.coordinate.latitude)"
                 longitudeLabel.text = "経度：\(location.coordinate.longitude)"
                 preLocation = location
+                buttonCount += 1
             }else{
                 latitudeLabelEnd.text = "緯度：\(location.coordinate.latitude)"
                 longitudeLabelEnd.text = "経度：\(location.coordinate.longitude)"
                 endLocation = location
+                buttonCount += 1
             }
             if (buttonCount/2) == 1 && preLocation != nil && endLocation != nil{
                 let result:Double = endLocation!.distance(from: preLocation!)
-                resultLabel.text = String(result) + "m"
+                resultLabel.text = String(format: "%.2f m",result)
+                totalrunsLabel.text = String(buttonCount / 2)
+                totalcaloriesLabel.text = String(format: "%.2f ",result / 5000 * 300)
+                
             }
         }
     }
@@ -80,7 +108,6 @@ class SnowboardViewController: UIViewController,CLLocationManagerDelegate{
     
     @IBAction func onClickGetLocationButton(_ sender: UIButton) {
         myLocationManager.requestLocation()
-        buttonCount += 1
     }
 
     override func didReceiveMemoryWarning() {
