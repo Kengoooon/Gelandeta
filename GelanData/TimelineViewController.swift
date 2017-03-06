@@ -17,17 +17,8 @@ class TimelineViewController: TWTRTimelineViewController {
         
         //タイトルの表示
         self.navigationItem.title = "ゲレンデツイート！"
-        let client = TWTRAPIClient()
-        
-        Twitter.sharedInstance().logIn { session, error in
-            if (session != nil) {
-                // ユーザ名からタイムラインを取得
-                //self.dataSource = TWTRUserTimelineDataSource(screenName: session!.userName, apiClient: client)
-            } else {
-                print("error: \(error!.localizedDescription)")
-            }
-        }
-        self.dataSource = TWTRSearchTimelineDataSource(searchQuery: "#スキー場", apiClient: client)
+        let client = TWTRAPIClient()        
+        self.dataSource = TWTRSearchTimelineDataSource(searchQuery: "#ゲレンデ", apiClient: client)
 
     }
     

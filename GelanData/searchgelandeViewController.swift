@@ -28,18 +28,18 @@ struct gelandeConditions{
             super.viewDidLoad()
         }
         
-        @IBAction func gelanderesultButton(_ sender: UIButton) {
-            performSegue(withIdentifier: "PushResult", sender: gelanderesultButton)
-        }
         
         @IBAction func begineerButton(_ sender: UIButton) {
             data.begginer = "1"
+            print(data)
         }
         
         @IBAction func middleButton(_ sender: UIButton) {
+            data.middle = "1"
         }
         
         @IBAction func advancedButton(_ sender: UIButton) {
+            data.hard = "1"
         }
         @IBAction func courseSegments(_ sender: UISegmentedControl) {
         }

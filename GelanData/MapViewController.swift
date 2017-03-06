@@ -22,6 +22,8 @@ class MapViewController:UIViewController, GMSMapViewDelegate,CLLocationManagerDe
     @IBOutlet var gelandeInfoLabel: UIStackView!
     @IBOutlet var courseCountLabel: UILabel!
     @IBOutlet var nighterImageView: UIImageView!
+    
+    
     //ゲレンデ配列
     var csvGelandeArray:[String] = []
     var gelandeArray:[String] = []
@@ -33,8 +35,36 @@ class MapViewController:UIViewController, GMSMapViewDelegate,CLLocationManagerDe
     // 取得した経度を保持するインスタンス
     var longitude: CLLocationDegrees!
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //サーバからデータ取得
+        var request = URLRequest(url: URL(string: "https://gerende-info.herokuapp.com/api/v1/gerende")!)
+        request.addValue("E2FB1B9C-5612-4A35-B971-69785892621F", forHTTPHeaderField: "X-App-Token")
+        let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+            guard let data = data else {
+                if let error = error {
+                    print(error)
+                    return
+                }
+                print("unknown error")
+                return
+            }
+            
+            do {
+                let json = try JSONSerialization.jsonObject(with: data, options: .allowFragments)
+                print(json)
+            } catch let error {
+                print(error)
+            }
+        }
+        task.resume()
+        
+        print(request)
+
+        
         gelandeInfoLabel.isHidden = true
 
         //CSVファイルからゲレンデデータを読み込み
