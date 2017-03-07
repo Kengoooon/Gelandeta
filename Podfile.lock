@@ -1,0 +1,34 @@
+PODS:
+  - Fabric (1.6.11)
+  - GoogleMaps (2.1.1):
+    - GoogleMaps/Maps (= 2.1.1)
+  - GoogleMaps/Base (2.1.1)
+  - GoogleMaps/Maps (2.1.1):
+    - GoogleMaps/Base
+  - Realm (2.0.3):
+    - Realm/Headers (= 2.0.3)
+  - Realm/Headers (2.0.3)
+  - RealmSwift (2.0.3):
+    - Realm (= 2.0.3)
+  - TwitterCore (2.5.0):
+    - Fabric
+  - TwitterKit (2.5.0):
+    - TwitterCore (= 2.5.0)
+
+DEPENDENCIES:
+  - Fabric
+  - GoogleMaps
+  - RealmSwift
+  - TwitterKit
+
+SPEC CHECKSUMS:
+  Fabric: 5911403591946b8228ab1c51d98f1d7137e863c6
+  GoogleMaps: a5b5bbe47734e2443bde781a6aa64e69fdb6d785
+  Realm: 5f008bfe3c8c47142eddfc30b8c1584cde22db24
+  RealmSwift: 5afb451f65b682242f272dbb52d5c6f6e343c980
+  TwitterCore: 95c46af93112768a7983bd370d66023553601d01
+  TwitterKit: dd8042698b0ff5bd3066fa919b3b2b50d8eed829
+
+PODFILE CHECKSUM: ee6a6a044eacfa9cbf42154398ee672e10c91dbf
+
+COCOAPODS: 1.2.0

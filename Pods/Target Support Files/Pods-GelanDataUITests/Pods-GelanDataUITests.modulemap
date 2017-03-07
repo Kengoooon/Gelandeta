@@ -1,0 +1,6 @@
+framework module Pods_GelanDataUITests {
+  umbrella header "Pods-GelanDataUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

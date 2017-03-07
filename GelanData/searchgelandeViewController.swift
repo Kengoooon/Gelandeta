@@ -46,11 +46,19 @@ struct gelandeConditions{
         @IBAction func liftFeeSlider(_ sender: UISlider) {
         }
         @IBAction func nighterButton(_ sender: UIButton) {
+            data.nighter = "1"
         }
         
         override func didReceiveMemoryWarning() {
             super.didReceiveMemoryWarning()
         }
+        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            super.prepare(for: segue, sender: sender)
+            if let destinationViewController = segue.destination as? MapResultViewController{
+                destinationViewController.data = data
+            }
+        }
+        
         
         
 }

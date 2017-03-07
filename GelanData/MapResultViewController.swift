@@ -18,7 +18,7 @@ class MapResultViewController: UIViewController,UITableViewDelegate,UITableViewD
     var gelandeArray:[String] = []
     var gelandeArray2:[String] = []
     var areaCount:Int = 0
-    var gelandeCount:Int = 0
+    var gelandeCount:Int = 55
     
     //クラス間で共有する関数をインスタンス化
     var data = gelandeConditions()
@@ -31,27 +31,25 @@ class MapResultViewController: UIViewController,UITableViewDelegate,UITableViewD
         
         print(data)
         print("bigginer\(data.begginer)")
-        data.begginer = "1"
-        
         
         //CSVファイルからゲレンデデータを読み込み
         let loadFile = LoadFile()
         csvGelandeArray = loadFile.loadCSV("gelande")
         
+        
         for _ in 0..<csvGelandeArray.count - 1{
-            gelandeArray2 = csvGelandeArray[areaCount].components(separatedBy: ",")
+            gelandeArray = csvGelandeArray[areaCount].components(separatedBy: ",")
             
             if data.begginer == "1"{
-                print(gelandeArray2[7])
-                if Int(gelandeArray2[7])! > 30{
+                if Int(gelandeArray[7])! > 30{
                     gelandeCount += 1
-                    print(gelandeArray2[7])
+                    print(gelandeArray[7])
                 }
             }
             areaCount += 1
-            gelandeArray2.removeAll()
+            gelandeArray.removeAll()
         }
-        gelandeArray2.removeAll()
+        gelandeArray.removeAll()
         areaCount = 0
         
         print("カウント\(gelandeCount)")
@@ -96,7 +94,7 @@ class MapResultViewController: UIViewController,UITableViewDelegate,UITableViewD
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // セルの数を設定
-        return (csvGelandeArray.count - 1)
+        return (gelandeCount)
     }
     
     // MARK: - UITableViewDelegate
