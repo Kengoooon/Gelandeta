@@ -17,7 +17,8 @@ class TimelineViewController: TWTRTimelineViewController {
         
         //タイトルの表示
         self.navigationItem.title = "ゲレンデツイート！"
-        let client = TWTRAPIClient()        
+        let client = TWTRAPIClient()
+        //#ゲレンデのツイートをタイムラインで表示
         self.dataSource = TWTRSearchTimelineDataSource(searchQuery: "#ゲレンデ", apiClient: client)
 
     }

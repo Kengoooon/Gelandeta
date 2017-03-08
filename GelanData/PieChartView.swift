@@ -35,23 +35,17 @@ class PieChartView: UIView {
     }
     
     override func draw(_ rect: CGRect) {
-        
-        // MARK: CGContextの初期化
+        //CGContextの初期化
         let ctx = UIGraphicsGetCurrentContext()
-        
-        // MARK: 円型にするためにradiusを設定
+        //円型にするためにradiusを設定
         let radius = min(frame.size.width, frame.size.height)/2
-        
-        // MARK: Viewの中心点を取得
+        //Viewの中心点を取得
         let viewCenter = CGPoint(x: bounds.size.width/2, y: bounds.size.height/2)
-        
-        // MARK: セグメントごとの比率に応じてグラフを変形するための定数
+        //セグメントごとの比率に応じてグラフを変形するための定数
         let valueCount = segments.reduce(0) {$0 + $1.value}
-        
-        // MARK: 円グラフの起点を設定 
+        //円グラフの起点を設定
         var startAngle = -CGFloat(M_PI*0.5)
-        
-        // MARK: 初期化されたすべてのセグメントを描画するための処理
+        //初期化されたすべてのセグメントを描画するための処理
         for segment in segments { // loop through the values array
             ctx?.setFillColor(segment.color.cgColor)
             let endAngle = startAngle+CGFloat(M_PI*2)*(segment.value/valueCount)

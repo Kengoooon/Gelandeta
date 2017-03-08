@@ -86,7 +86,6 @@ class SnowboardViewController: UIViewController,CLLocationManagerDelegate{
                 resultLabel.text = String(format: "%.2f m",result)
                 totalrunsLabel.text = String(buttonCount / 2)
                 totalcaloriesLabel.text = String(format: "%.2f ",result / 5000 * 300)
-                
             }
         }
     }

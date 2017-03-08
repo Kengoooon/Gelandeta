@@ -12,38 +12,77 @@ import CoreLocation
 import Foundation
 
 class MapResultViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
-
+    @IBOutlet var backgroundView: UIView!
     //ゲレンデ配列
     var csvGelandeArray:[String] = []
     var gelandeArray:[String] = []
-    var gelandeArray2:[String] = []
+    var gelandenameArray:[String] = []
+    var gelandeHpArray:[String] = []
+    var gelandeBeginner:[String] = []
+    var gelandeMiddle:[String] = []
+    var gelandeHard:[String] = []
+    var gelandeCourse:[String] = []
     var areaCount:Int = 0
-    var gelandeCount:Int = 55
-    
+    var gelandeCount:Int = 0
     //クラス間で共有する関数をインスタンス化
     var data = gelandeConditions()
-
+    //セクション名を格納
+    var sections = [String]()
+    
     // ステータスバーの高さ
     let statusBarHeight = UIApplication.shared.statusBarFrame.height
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         print(data)
-        print("bigginer\(data.begginer)")
         
         //CSVファイルからゲレンデデータを読み込み
         let loadFile = LoadFile()
         csvGelandeArray = loadFile.loadCSV("gelande")
         
-        
+        //リスト表示するゲレンデ数を算出
         for _ in 0..<csvGelandeArray.count - 1{
             gelandeArray = csvGelandeArray[areaCount].components(separatedBy: ",")
             
-            if data.begginer == "1"{
-                if Int(gelandeArray[7])! > 30{
-                    gelandeCount += 1
-                    print(gelandeArray[7])
+            //初心者ゲレンデかつナイターありの場合
+            if data.begginer == "1" && data.nighter == "1"{
+                if Int(gelandeArray[7])! > 40 && Int(gelandeArray[10])! == 1 && Double(gelandeArray[11])! <= Double(data.liftchicket)! && Int(gelandeArray[6])! >= Int(data.course)!{
+                    gelandeCalc()
+                }
+            }
+            //初心者ゲレンデかつナイターなしの場合
+            else if data.begginer == "1" && data.nighter == "0"{
+                if Int(gelandeArray[7])! > 40 && Int(gelandeArray[10])! == 0 && Double(gelandeArray[11])! <= Double(data.liftchicket)! && Int(gelandeArray[6])! >= Int(data.course)!{
+                    gelandeCalc()
+                }
+            //中級者ゲレンデかつナイターありの場合
+            }else if data.middle == "1" && data.nighter == "1"{
+                if Int(gelandeArray[8])! > 40 && Int(gelandeArray[10])! == 1 && Double(gelandeArray[11])! <= Double(data.liftchicket)! && Int(gelandeArray[6])! >= Int(data.course)!{
+                    gelandeCalc()
+                }
+            //中級者ゲレンデかつナイターなしの場合
+            }else if data.middle == "1" && data.nighter == "0"{
+                if Int(gelandeArray[8])! > 40 && Int(gelandeArray[10])! == 0 && Double(gelandeArray[11])! <= Double(data.liftchicket)! && Int(gelandeArray[6])! >= Int(data.course)!{
+                    gelandeCalc()
+                }
+            //上級者ゲレンデかつナイターありの場合
+            }else if data.hard == "1" && data.nighter == "1"{
+                if Int(gelandeArray[9])! > 30 && Int(gelandeArray[10])! == 1 && Double(gelandeArray[11])! <= Double(data.liftchicket)! && Int(gelandeArray[6])! >= Int(data.course)!{
+                    gelandeCalc()
+                }
+            //上級者ゲレンデかつナイターなしの場合
+            }else if data.hard == "1" && data.nighter == "0"{
+                if Int(gelandeArray[9])! > 30 && Int(gelandeArray[10])! == 0 && Double(gelandeArray[11])! <= Double(data.liftchicket)! && Int(gelandeArray[6])! >= Int(data.course)!{
+                    gelandeCalc()
+                }
+            //ナイターありの場合
+            }else if data.nighter == "1"{
+                if Int(gelandeArray[10])! == 1 && Double(gelandeArray[11])! <= Double(data.liftchicket)! && Int(gelandeArray[6])! >= Int(data.course)!{
+                    gelandeCalc()
+                }
+            }else{
+                if Double(gelandeArray[11])! <= Double(data.liftchicket)! && Int(gelandeArray[6])! >= Int(data.course)!{
+                    gelandeCalc()
                 }
             }
             areaCount += 1
@@ -51,9 +90,24 @@ class MapResultViewController: UIViewController,UITableViewDelegate,UITableViewD
         }
         gelandeArray.removeAll()
         areaCount = 0
-        
-        print("カウント\(gelandeCount)")
-        
+        print(gelandeCount)
+        print("name\(gelandenameArray)")
+ 
+        //グラデーションの設定
+        let gradientLayer = CAGradientLayer()
+        //フレームを用意
+        gradientLayer.frame = backgroundView.bounds
+        //色を定義
+        let color1 = UIColor(red: 0.4, green: 0.7, blue: 0.9, alpha: 1.0).cgColor as CGColor
+        let color2 = UIColor(red: 0.1, green: 0.5, blue: 0.8, alpha: 1.0).cgColor as CGColor
+        let color3 = UIColor.white.cgColor
+        //グラデーションレイヤーに色を設定
+        gradientLayer.colors = [color1, color2,color3]
+        //始点・終点の設定
+        gradientLayer.startPoint = CGPoint(x:0,y:0);
+        gradientLayer.endPoint = CGPoint(x:1.0,y:0.8);
+        //headerviewにグラデーションレイヤーを挿入
+        backgroundView.layer.insertSublayer(gradientLayer,at:0)
         
         let tableView = UITableView()
         // サイズと位置調整
@@ -74,24 +128,27 @@ class MapResultViewController: UIViewController,UITableViewDelegate,UITableViewD
         self.view.addSubview(tableView)
         
     }
-    // セルを作る
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        //ゲレンデデータの読み込み関数
-        func nextGerande(){
-            gelandeArray.removeAll()
-            gelandeArray = csvGelandeArray[areaCount].components(separatedBy: ",")
-        }
-        
-        nextGerande()
-        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "cell")
-        cell.accessoryType = .detailButton
-        cell.textLabel?.text = "\(gelandeArray[1])"
-        cell.detailTextLabel?.text = "\(gelandeArray[5])"
-        areaCount += 1
-        return cell
+    
+    //条件に応じた配列を作成
+    func gelandeCalc(){
+        gelandeCount += 1
+        gelandenameArray.append(gelandeArray[1])
+        gelandeHpArray.append(gelandeArray[5])
+        gelandeCourse.append(gelandeArray[6])
+        gelandeBeginner.append(gelandeArray[7])
+        gelandeMiddle.append(gelandeArray[8])
+        gelandeHard.append(gelandeArray[9])
     }
     
+    // セルを作成
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        //ゲレンデデータの読み込み関数
+        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "cell")
+        cell.accessoryType = .detailButton
+        cell.textLabel?.text = "\(gelandenameArray[indexPath.row])"
+        cell.detailTextLabel?.text = "\(gelandeHpArray[indexPath.row])"
+        return cell
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // セルの数を設定
         return (gelandeCount)
@@ -102,6 +159,12 @@ class MapResultViewController: UIViewController,UITableViewDelegate,UITableViewD
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // セルがタップされた時の処理
         print("タップされたセルのindex番号: \(indexPath.row)")
+        // アラート表示
+        let alert: UIAlertController = UIAlertController(title: "\(gelandenameArray[indexPath.row])", message: "コース数:\(gelandeCourse[indexPath.row])                                                 初級:\(gelandeBeginner[indexPath.row])%,中級:\(gelandeMiddle[indexPath.row])%,上級:\(gelandeHard[indexPath.row])%", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default) { action in
+        }
+        alert.addAction(okAction)
+        self.present(alert, animated: true, completion: nil)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -114,7 +177,6 @@ class MapResultViewController: UIViewController,UITableViewDelegate,UITableViewD
         print("タップされたアクセサリがあるセルのindex番号: \(indexPath.row)")
         let cell = tableView.cellForRow(at: indexPath)!
         let url = NSURL(string: (cell.detailTextLabel?.text)!)
-        print(gelandeArray[5])
         if #available(iOS 10.0, *) {
             UIApplication.shared.open(url as! URL, options: [:], completionHandler: nil)
         } else {
@@ -122,6 +184,19 @@ class MapResultViewController: UIViewController,UITableViewDelegate,UITableViewD
                 UIApplication.shared.openURL(url! as URL)
             }
         }
+    }
+    
+    //セクションの設定を行う
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let label : UILabel = UILabel()
+        label.backgroundColor = UIColor.gray
+        label.textColor = UIColor.white
+        if(section == 0){
+            label.text = sections[section]
+        } else if (section == 1){
+            label.text = sections[section]
+        }
+        return label
     }
 
     override func didReceiveMemoryWarning() {

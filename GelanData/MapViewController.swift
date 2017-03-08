@@ -23,7 +23,6 @@ class MapViewController:UIViewController, GMSMapViewDelegate,CLLocationManagerDe
     @IBOutlet var courseCountLabel: UILabel!
     @IBOutlet var nighterImageView: UIImageView!
     
-    
     //ゲレンデ配列
     var csvGelandeArray:[String] = []
     var gelandeArray:[String] = []
@@ -35,11 +34,9 @@ class MapViewController:UIViewController, GMSMapViewDelegate,CLLocationManagerDe
     // 取得した経度を保持するインスタンス
     var longitude: CLLocationDegrees!
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    
         //サーバからデータ取得
         var request = URLRequest(url: URL(string: "https://gerende-info.herokuapp.com/api/v1/gerende")!)
         request.addValue("E2FB1B9C-5612-4A35-B971-69785892621F", forHTTPHeaderField: "X-App-Token")
@@ -52,29 +49,20 @@ class MapViewController:UIViewController, GMSMapViewDelegate,CLLocationManagerDe
                 print("unknown error")
                 return
             }
-            
             do {
                 let json = try JSONSerialization.jsonObject(with: data, options: .allowFragments)
-                print(json)
             } catch let error {
                 print(error)
             }
         }
         task.resume()
-        
-        print(request)
 
-        
         gelandeInfoLabel.isHidden = true
-
         //CSVファイルからゲレンデデータを読み込み
         let loadFile = LoadFile()
         csvGelandeArray = loadFile.loadCSV("gelande")
-        
         // とりあえず地図を表示
         var camera = GMSCameraPosition.camera(withLatitude: 35.67,longitude: 139.74, zoom: 8)
-        //var camera = GMSCameraPosition.camera(withLatitude: latitude,longitude: longitude, zoom: 8)
-        
         var mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
         mapView.isMyLocationEnabled = true
         mapView.delegate = self
@@ -99,7 +87,6 @@ class MapViewController:UIViewController, GMSMapViewDelegate,CLLocationManagerDe
             locationManager.distanceFilter = 10
             // GPSの使用を開始する
             locationManager.startUpdatingLocation()
-            
         }
         
         //ゲレンデデータの読み込み関数
@@ -113,23 +100,19 @@ class MapViewController:UIViewController, GMSMapViewDelegate,CLLocationManagerDe
             marker.map = mapView
             areaCount += 1
             }
-        
         for _ in 0..<csvGelandeArray.count - 1{
             nextGerande()
         }
-        
     }
     
     func mapView(_ mapView: GMSMapView, didTapInfoWindowOf didTapInfoWindowOfMarker: GMSMarker){
-        // ユーザーに関わる処理
-        print("タップイベント")
+        // ユーザーに関わる処理(タップイベント)
         //snipperの値を改行区切りで配列に格納
         var courseArray:[String] = String(didTapInfoWindowOfMarker.snippet!).components(separatedBy: "\n")
         
         //タップしたゲレンデのコース難易度グラフ生成
         let pieChartView = PieChartView()
         pieChartView.frame = CGRect(x: 0, y: 500, width: view.frame.size.width, height: 100)
-        
         pieChartView.segments = [
             Segment(color: UIColor.red, value: CGFloat(Int(courseArray[2])!)),
             Segment(color: UIColor.green, value: CGFloat(Int(courseArray[3])!)),
@@ -142,18 +125,16 @@ class MapViewController:UIViewController, GMSMapViewDelegate,CLLocationManagerDe
         courseCountLabel.text = courseArray[1]
         view.addSubview(gelandeInfoLabel)
         
-        
         //ナイターの可否を表示
         if String(courseArray[5])! == "1"{
             nighterImageView.image = UIImage(named:"nighterOn.png")
         }else{
             nighterImageView.image = UIImage(named:"nighterOff.png")
         }
-        
     }
+    
     func mapView(_ mapView: GMSMapView, didLongPressInfoWindowOf : GMSMarker){
-        // ユーザーに関わる処理
-        print("ロングタップイベント")
+        // ユーザーに関わる処理(ロングタップイベント)
         //snipperの値を改行区切りで配列に格納
         var courseArray:[String] = String(didLongPressInfoWindowOf.snippet!).components(separatedBy: "\n")
         let url = NSURL(string: courseArray[0])
@@ -164,7 +145,6 @@ class MapViewController:UIViewController, GMSMapViewDelegate,CLLocationManagerDe
                 UIApplication.shared.openURL(url! as URL)
             }
         }
-
     }
     
     //ユーザが位置情報の使用を許可しているか確認
@@ -194,14 +174,11 @@ class MapViewController:UIViewController, GMSMapViewDelegate,CLLocationManagerDe
         longitude = newLocation.coordinate.longitude
         // 取得した緯度・経度をLogに表示
         print("自分latiitude: \(latitude) , longitude: \(longitude)")
-        
-        // GPSの使用を停止する．停止しない限りGPSは実行され，指定間隔で更新され続ける．
-        // lm.stopUpdatingLocation()
     }
     
     /* 位置情報取得失敗時に実行される関数 */
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        // この例ではLogにErrorと表示するだけ．
+        //LogにErrorと表示する
         NSLog("ErrorErrorErrorErrorError")
     }
     
@@ -211,7 +188,6 @@ class MapViewController:UIViewController, GMSMapViewDelegate,CLLocationManagerDe
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     
