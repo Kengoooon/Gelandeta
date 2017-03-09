@@ -11,9 +11,11 @@ import Fabric
 import TwitterKit
 
 class TwitterViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         
         let loginButton = TWTRLogInButton(logInCompletion: {
             session, error in

@@ -18,6 +18,7 @@ struct gelandeConditions{
     var middle: String = ""
     var hard: String = ""
     var liftchicket: String = "5000"
+    var area:String = ""
 }
 
     class searchgelandeViewController:UIViewController, GMSMapViewDelegate,CLLocationManagerDelegate,UITabBarDelegate{
@@ -27,14 +28,22 @@ struct gelandeConditions{
         @IBOutlet weak var nighterButton: UIButton!
         @IBOutlet weak var liftfeeLabel: UILabel!
         @IBOutlet var backgroundView: UIView!
+        @IBOutlet weak var areaNagano: UIButton!
+        @IBOutlet weak var areaNigata: UIButton!
 
         var data = gelandeConditions()
         var count:Int = 0
+        
+        @IBAction func back(segue:UIStoryboardSegue){
+        }
         
         override func viewDidLoad() {
             super.viewDidLoad()
             
             buttonReset()
+            areaReset()
+            self.nighterButton.backgroundColor = UIColor.gray
+            
             //グラデーションの設定
             let gradientLayer = CAGradientLayer()
             //フレームを用意
@@ -56,7 +65,11 @@ struct gelandeConditions{
             self.begginerButton.backgroundColor = UIColor.gray
             self.middleButton.backgroundColor = UIColor.gray
             self.hardButton.backgroundColor = UIColor.gray
-            self.nighterButton.backgroundColor = UIColor.gray
+        }
+        
+        func areaReset(){
+            self.areaNagano.backgroundColor = UIColor.gray
+            self.areaNigata.backgroundColor = UIColor.gray
         }
         
         //初心者ボタン
@@ -117,6 +130,17 @@ struct gelandeConditions{
             self.nighterButton.backgroundColor = UIColor.gray
                 count = 0
             }
+        }
+
+        @IBAction func areaNigataButton(_ sender: UIButton) {
+            areaReset()
+            data.area = "Nigata"
+            self.areaNigata.backgroundColor = UIColor.blue
+        }
+        @IBAction func areaNaganoButton(_ sender: UIButton) {
+            areaReset()
+            data.area = "Nagano"
+            self.areaNagano.backgroundColor = UIColor.blue
         }
         
         override func didReceiveMemoryWarning() {

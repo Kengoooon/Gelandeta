@@ -70,18 +70,20 @@ class SnowboardViewController: UIViewController,CLLocationManagerDelegate{
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let location = manager.location {
-            if (buttonCount / 2) != 1{
+            print(buttonCount)
+            if (buttonCount % 2) != 0{
+                print("奇数")
                 latitudeLabel.text = "緯度：\(location.coordinate.latitude)"
                 longitudeLabel.text = "経度：\(location.coordinate.longitude)"
                 preLocation = location
-                buttonCount += 1
-            }else{
+            }
+            else if (buttonCount % 2) == 0{
+                print("偶数")
                 latitudeLabelEnd.text = "緯度：\(location.coordinate.latitude)"
                 longitudeLabelEnd.text = "経度：\(location.coordinate.longitude)"
                 endLocation = location
-                buttonCount += 1
             }
-            if (buttonCount/2) == 1 && preLocation != nil && endLocation != nil{
+            if (buttonCount % 2) == 0 && preLocation != nil && endLocation != nil{
                 let result:Double = endLocation!.distance(from: preLocation!)
                 resultLabel.text = String(format: "%.2f m",result)
                 totalrunsLabel.text = String(buttonCount / 2)
@@ -94,6 +96,7 @@ class SnowboardViewController: UIViewController,CLLocationManagerDelegate{
     }
     
     @IBAction func onClickGetLocationButton(_ sender: UIButton) {
+        buttonCount += 1
         myLocationManager.requestLocation()
     }
 

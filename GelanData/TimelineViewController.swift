@@ -20,7 +20,6 @@ class TimelineViewController: TWTRTimelineViewController {
         let client = TWTRAPIClient()
         //#ゲレンデのツイートをタイムラインで表示
         self.dataSource = TWTRSearchTimelineDataSource(searchQuery: "#ゲレンデ", apiClient: client)
-
     }
     
 }
