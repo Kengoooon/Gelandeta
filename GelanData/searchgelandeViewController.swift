@@ -13,10 +13,10 @@ import Foundation
 //クラス間で共有する変数
 struct gelandeConditions{
     var course: String = "1"
-    var nighter: String = ""
-    var begginer: String = ""
-    var middle: String = ""
-    var hard: String = ""
+    var nighter: String = "0"
+    var begginer: String = "0"
+    var middle: String = "0"
+    var hard: String = "0"
     var liftchicket: String = "5000"
     var area:String = ""
 }
@@ -122,14 +122,16 @@ struct gelandeConditions{
         
         //ナイターを選択
         @IBAction func nighterButton(_ sender: UIButton) {
-            data.nighter = "1"
-            if count == 0{
-            self.nighterButton.backgroundColor = UIColor.blue
+            if count % 2 == 1{
+            data.nighter = "0"
+            self.nighterButton.backgroundColor = UIColor.gray
                 count = 1
             }else{
-            self.nighterButton.backgroundColor = UIColor.gray
+            data.nighter = "1"
+            self.nighterButton.backgroundColor = UIColor.blue
                 count = 0
             }
+            count += 1
         }
 
         @IBAction func areaNigataButton(_ sender: UIButton) {
@@ -137,6 +139,7 @@ struct gelandeConditions{
             data.area = "Nigata"
             self.areaNigata.backgroundColor = UIColor.blue
         }
+        
         @IBAction func areaNaganoButton(_ sender: UIButton) {
             areaReset()
             data.area = "Nagano"

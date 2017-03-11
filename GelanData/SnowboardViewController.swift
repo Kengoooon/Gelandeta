@@ -28,6 +28,8 @@ class SnowboardViewController: UIViewController,CLLocationManagerDelegate{
     var endLocation: CLLocation?
     var stockLati: String = ""
     var stockLong: String = ""
+    var latiArray: [String] = []
+    var longArray: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -70,6 +72,30 @@ class SnowboardViewController: UIViewController,CLLocationManagerDelegate{
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let location = manager.location {
+            
+            //算出方法変更検討中
+//            latiArray.append(String(location.coordinate.latitude))
+//            longArray.append(String(location.coordinate.longitude))
+//            if latiArray.count > 2{
+//                latitudeLabel.text = "緯度：\(String(latiArray[latiArray.count - 2])!)"
+//                longitudeLabel.text = "経度：\(String(latiArray[longArray.count - 2])!)"
+//                latitudeLabelEnd.text = "緯度：\(String(latiArray[latiArray.count - 1])!)"
+//                longitudeLabelEnd.text = "経度：\(String(latiArray[longArray.count - 1])!)"
+//            }else{
+//                latitudeLabel.text = "緯度：\(String(latiArray[latiArray.count - 1])!)"
+//                longitudeLabel.text = "経度：\(String(latiArray[longArray.count - 1])!)"
+//            }
+//            
+//            
+            if  preLocation != nil && endLocation != nil{
+                let result:Double = endLocation!.distance(from: preLocation!)
+                resultLabel.text = String(format: "%.2f m",result)
+                totalrunsLabel.text = String(buttonCount / 2)
+                totalcaloriesLabel.text = String(format: "%.2f ",result / 5000 * 300)
+            }
+
+            
+
             print(buttonCount)
             if (buttonCount % 2) != 0{
                 print("奇数")
