@@ -12,12 +12,12 @@ import Foundation
 
 //クラス間で共有する変数
 struct gelandeConditions{
-    var course: String = "1"
-    var nighter: String = "0"
-    var begginer: String = "0"
-    var middle: String = "0"
-    var hard: String = "0"
-    var liftchicket: String = "5000"
+    var course: Int = 1
+    var nighter: Int = 0
+    var begginer: Int = 0
+    var middle: Int = 0
+    var hard: Int = 0
+    var liftchicket: Double = 5000
     var area:String = ""
 }
 
@@ -30,6 +30,7 @@ struct gelandeConditions{
         @IBOutlet var backgroundView: UIView!
         @IBOutlet weak var areaNagano: UIButton!
         @IBOutlet weak var areaNigata: UIButton!
+        @IBOutlet weak var areaGunma: UIButton!
 
         var data = gelandeConditions()
         var count:Int = 0
@@ -70,31 +71,32 @@ struct gelandeConditions{
         func areaReset(){
             self.areaNagano.backgroundColor = UIColor.gray
             self.areaNigata.backgroundColor = UIColor.gray
+            self.areaGunma.backgroundColor = UIColor.gray
         }
         
         //初心者ボタン
         @IBAction func begineerButton(_ sender: UIButton) {
-            data.begginer = "1"
-            data.middle = "0"
-            data.hard = "0"
+            data.begginer = 1
+            data.middle = 0
+            data.hard = 0
             buttonReset()
             self.begginerButton.backgroundColor = UIColor.blue
         }
         
         //中級者ボタン
         @IBAction func middleButton(_ sender: UIButton) {
-            data.begginer = "0"
-            data.middle = "1"
-            data.hard = "0"
+            data.begginer = 0
+            data.middle = 1
+            data.hard = 0
             buttonReset()
             self.middleButton.backgroundColor = UIColor.blue
         }
         
         //上級者ボタン
         @IBAction func advancedButton(_ sender: UIButton) {
-            data.begginer = "0"
-            data.middle = "0"
-            data.hard = "1"
+            data.begginer = 0
+            data.middle = 0
+            data.hard = 1
             buttonReset()
             self.hardButton.backgroundColor = UIColor.blue
         }
@@ -103,13 +105,13 @@ struct gelandeConditions{
         @IBAction func courseSegments(_ sender: UISegmentedControl) {
             switch sender.selectedSegmentIndex {
             case 0:
-                data.course = "1"
+                data.course = 1
             case 1:
-                data.course = "5"
+                data.course = 5
             case 2:
-                data.course = "10"
+                data.course = 10
             case 3:
-                data.course = "15"
+                data.course = 15
             default:break
             }
         }
@@ -117,21 +119,18 @@ struct gelandeConditions{
         //リフト券代金を選択
         @IBAction func liftFeeSlider(_ sender: UISlider) {
             liftfeeLabel.text = "¥\(String(Int(sender.value)))以下"
-            data.liftchicket = String(round(sender.value))
+            data.liftchicket = Double(round(sender.value))
         }
         
         //ナイターを選択
         @IBAction func nighterButton(_ sender: UIButton) {
-            if count % 2 == 1{
-            data.nighter = "0"
+            if data.nighter == 1{
+            data.nighter = 0
             self.nighterButton.backgroundColor = UIColor.gray
-                count = 1
             }else{
-            data.nighter = "1"
+            data.nighter = 1
             self.nighterButton.backgroundColor = UIColor.blue
-                count = 0
             }
-            count += 1
         }
 
         @IBAction func areaNigataButton(_ sender: UIButton) {
@@ -145,6 +144,14 @@ struct gelandeConditions{
             data.area = "Nagano"
             self.areaNagano.backgroundColor = UIColor.blue
         }
+        
+        @IBAction func areaGunmaButton(_ sender: UIButton) {
+            areaReset()
+            data.area = "Gunma"
+            self.areaGunma.backgroundColor = UIColor.blue
+            
+        }
+        
         
         override func didReceiveMemoryWarning() {
             super.didReceiveMemoryWarning()

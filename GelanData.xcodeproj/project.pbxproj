@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4592A229F3C09B1076D1D625 /* Pods_GelanDataTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 169EE24D4FD5C6B91D3A0CA1 /* Pods_GelanDataTests.framework */; };
 		9DFC48591ED6713B57057401 /* Pods_GelanDataUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 557E7F156CCAB94A76120EF0 /* Pods_GelanDataUITests.framework */; };
+		BF55BA1E1F8A2E17007B278D /* search.png in Resources */ = {isa = PBXBuildFile; fileRef = BF55BA1D1F8A2E17007B278D /* search.png */; };
 		BF785F5C1E6C156B0098AA69 /* MapResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF785F5B1E6C156B0098AA69 /* MapResultViewController.swift */; };
 		BF8A012C1E57396800D8DCC4 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF8A012B1E57396800D8DCC4 /* CoreLocation.framework */; };
 		BF8A012E1E57F61100D8DCC4 /* TwitterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8A012D1E57F61100D8DCC4 /* TwitterViewController.swift */; };
@@ -16,7 +17,6 @@
 		BF8A01351E59386F00D8DCC4 /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF8A01311E59386F00D8DCC4 /* TwitterKit.framework */; };
 		BF8A01361E59386F00D8DCC4 /* TwitterKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BF8A01321E59386F00D8DCC4 /* TwitterKitResources.bundle */; };
 		BF8A01371E59386F00D8DCC4 /* TwitterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF8A01331E59386F00D8DCC4 /* TwitterCore.framework */; };
-		BF8A01391E59609200D8DCC4 /* twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = BF8A01381E59609200D8DCC4 /* twitter.png */; };
 		BF8A013B1E5964CD00D8DCC4 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8A013A1E5964CD00D8DCC4 /* MapViewController.swift */; };
 		BF8A013F1E59E07500D8DCC4 /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8A013E1E59E07500D8DCC4 /* TimelineViewController.swift */; };
 		BF8A01411E5DDB5000D8DCC4 /* SnowboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8A01401E5DDB5000D8DCC4 /* SnowboardViewController.swift */; };
@@ -31,13 +31,7 @@
 		BFAEEFB41E4B31BF00C097C8 /* GelanDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAEEFB31E4B31BF00C097C8 /* GelanDataTests.swift */; };
 		BFAEEFBF1E4B31BF00C097C8 /* GelanDataUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAEEFBE1E4B31BF00C097C8 /* GelanDataUITests.swift */; };
 		BFDBE6561E62BC0B00F3A659 /* PieChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDBE6551E62BC0A00F3A659 /* PieChartView.swift */; };
-		BFDBE6611E632B5C00F3A659 /* nighterOn.png in Resources */ = {isa = PBXBuildFile; fileRef = BFDBE65F1E632B5C00F3A659 /* nighterOn.png */; };
-		BFDBE6621E632B5C00F3A659 /* nighterOff.png in Resources */ = {isa = PBXBuildFile; fileRef = BFDBE6601E632B5C00F3A659 /* nighterOff.png */; };
-		BFDBE66A1E6AA77100F3A659 /* calories.png in Resources */ = {isa = PBXBuildFile; fileRef = BFDBE6691E6AA77100F3A659 /* calories.png */; };
-		BFDBE66C1E6AA79200F3A659 /* snowboard.png in Resources */ = {isa = PBXBuildFile; fileRef = BFDBE66B1E6AA79200F3A659 /* snowboard.png */; };
 		BFDBE66E1E6AB90F00F3A659 /* searchgelandeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDBE66D1E6AB90F00F3A659 /* searchgelandeViewController.swift */; };
-		BFDBE6701E6ABB6600F3A659 /* search.png in Resources */ = {isa = PBXBuildFile; fileRef = BFDBE66F1E6ABB6600F3A659 /* search.png */; };
-		BFDBE6721E6ABBCF00F3A659 /* search.png in Resources */ = {isa = PBXBuildFile; fileRef = BFDBE6711E6ABBCF00F3A659 /* search.png */; };
 		E88B306C4FDA0217DE05ACFF /* Pods_GelanData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAB02A2DAC8734D9F948A91A /* Pods_GelanData.framework */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +60,7 @@
 		AA4B105292758CD0EF1F7106 /* Pods-GelanDataUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GelanDataUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GelanDataUITests/Pods-GelanDataUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		AAB02A2DAC8734D9F948A91A /* Pods_GelanData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GelanData.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBB75862F1896F1EBA7425E4 /* Pods-GelanDataUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GelanDataUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GelanDataUITests/Pods-GelanDataUITests.release.xcconfig"; sourceTree = "<group>"; };
+		BF55BA1D1F8A2E17007B278D /* search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search.png; sourceTree = SOURCE_ROOT; };
 		BF785F5B1E6C156B0098AA69 /* MapResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapResultViewController.swift; sourceTree = "<group>"; };
 		BF8A012B1E57396800D8DCC4 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		BF8A012D1E57F61100D8DCC4 /* TwitterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterViewController.swift; sourceTree = "<group>"; };
@@ -73,7 +68,6 @@
 		BF8A01311E59386F00D8DCC4 /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterKit.framework; sourceTree = SOURCE_ROOT; };
 		BF8A01321E59386F00D8DCC4 /* TwitterKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TwitterKitResources.bundle; path = TwitterKit.framework/Versions/A/Resources/TwitterKitResources.bundle; sourceTree = SOURCE_ROOT; };
 		BF8A01331E59386F00D8DCC4 /* TwitterCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterCore.framework; sourceTree = SOURCE_ROOT; };
-		BF8A01381E59609200D8DCC4 /* twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = twitter.png; path = ../../twitter.png; sourceTree = "<group>"; };
 		BF8A013A1E5964CD00D8DCC4 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		BF8A013E1E59E07500D8DCC4 /* TimelineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineViewController.swift; sourceTree = "<group>"; };
 		BF8A01401E5DDB5000D8DCC4 /* SnowboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnowboardViewController.swift; sourceTree = "<group>"; };
@@ -94,13 +88,7 @@
 		BFAEEFBE1E4B31BF00C097C8 /* GelanDataUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GelanDataUITests.swift; sourceTree = "<group>"; };
 		BFAEEFC01E4B31BF00C097C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFDBE6551E62BC0A00F3A659 /* PieChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieChartView.swift; sourceTree = "<group>"; };
-		BFDBE65F1E632B5C00F3A659 /* nighterOn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = nighterOn.png; path = ../../nighterOn.png; sourceTree = "<group>"; };
-		BFDBE6601E632B5C00F3A659 /* nighterOff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = nighterOff.png; path = ../../nighterOff.png; sourceTree = "<group>"; };
-		BFDBE6691E6AA77100F3A659 /* calories.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = calories.png; path = ../../calories.png; sourceTree = "<group>"; };
-		BFDBE66B1E6AA79200F3A659 /* snowboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = snowboard.png; path = ../../snowboard.png; sourceTree = "<group>"; };
 		BFDBE66D1E6AB90F00F3A659 /* searchgelandeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = searchgelandeViewController.swift; sourceTree = "<group>"; };
-		BFDBE66F1E6ABB6600F3A659 /* search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = search.png; path = ../../search.png; sourceTree = "<group>"; };
-		BFDBE6711E6ABBCF00F3A659 /* search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = search.png; path = ../../search.png; sourceTree = "<group>"; };
 		CCDDE5CDA02550DD3F9E7A30 /* Pods-GelanDataTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GelanDataTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GelanDataTests/Pods-GelanDataTests.release.xcconfig"; sourceTree = "<group>"; };
 		EE4179544097E9A0598DA1A6 /* Pods-GelanData.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GelanData.release.xcconfig"; path = "Pods/Target Support Files/Pods-GelanData/Pods-GelanData.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -203,16 +191,10 @@
 				BF8A01401E5DDB5000D8DCC4 /* SnowboardViewController.swift */,
 				BFDBE66D1E6AB90F00F3A659 /* searchgelandeViewController.swift */,
 				BF785F5B1E6C156B0098AA69 /* MapResultViewController.swift */,
-				BFDBE65F1E632B5C00F3A659 /* nighterOn.png */,
-				BFDBE6601E632B5C00F3A659 /* nighterOff.png */,
 				BFAEEFA51E4B31BE00C097C8 /* Assets.xcassets */,
+				BF55BA1D1F8A2E17007B278D /* search.png */,
 				BF9CE02E1E4B42EB0033BFD8 /* gelande.csv */,
 				BFAEEFAA1E4B31BE00C097C8 /* Info.plist */,
-				BFDBE6711E6ABBCF00F3A659 /* search.png */,
-				BFDBE6691E6AA77100F3A659 /* calories.png */,
-				BFDBE66F1E6ABB6600F3A659 /* search.png */,
-				BFDBE66B1E6AA79200F3A659 /* snowboard.png */,
-				BF8A01381E59609200D8DCC4 /* twitter.png */,
 			);
 			path = GelanData;
 			sourceTree = "<group>";
@@ -356,17 +338,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFAEEFA91E4B31BE00C097C8 /* LaunchScreen.storyboard in Resources */,
-				BFDBE6611E632B5C00F3A659 /* nighterOn.png in Resources */,
+				BF55BA1E1F8A2E17007B278D /* search.png in Resources */,
 				BF9CE02F1E4B42EB0033BFD8 /* gelande.csv in Resources */,
 				BFAEEFA61E4B31BE00C097C8 /* Assets.xcassets in Resources */,
-				BF8A01391E59609200D8DCC4 /* twitter.png in Resources */,
-				BFDBE6621E632B5C00F3A659 /* nighterOff.png in Resources */,
 				BFAEEFA41E4B31BE00C097C8 /* Main.storyboard in Resources */,
-				BFDBE6721E6ABBCF00F3A659 /* search.png in Resources */,
-				BFDBE6701E6ABB6600F3A659 /* search.png in Resources */,
 				BF8A01361E59386F00D8DCC4 /* TwitterKitResources.bundle in Resources */,
-				BFDBE66A1E6AA77100F3A659 /* calories.png in Resources */,
-				BFDBE66C1E6AA79200F3A659 /* snowboard.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -94,8 +94,6 @@ class SnowboardViewController: UIViewController,CLLocationManagerDelegate{
                 totalcaloriesLabel.text = String(format: "%.2f ",result / 5000 * 300)
             }
 
-            
-
             print(buttonCount)
             if (buttonCount % 2) != 0{
                 print("奇数")

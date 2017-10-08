@@ -11,10 +11,9 @@ import UIKit
 
 struct Segment {
     
-    // MARK: セグメントの背景色
+    //セグメントの背景色
     var color : UIColor
-    
-    // MARK: セグメントの割合を設定する変数（比率）
+    //セグメントの割合を設定する変数（比率）
     var value : CGFloat
 }
 
