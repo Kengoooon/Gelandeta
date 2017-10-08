@@ -61,13 +61,6 @@ class MapResultViewController: UIViewController,UITableViewDelegate,UITableViewD
                     print("初心者ゲレンデかつナイターなしかつ長野の場合")
                 }
             }
-            //初心者ゲレンデかつナイターなしかつ長野の場合
-            else if data.begginer == 1 && data.nighter == 0 && data.area == "Gunma"{
-                if Int(gelandeArray[7])! > 40 && Int(gelandeArray[10])! == 0 && Double(gelandeArray[11])! <= data.liftchicket && Int(gelandeArray[6])! >= data.course && gelandeArray[12] == "群馬"{
-                    gelandeCalc()
-                    print("初心者ゲレンデかつナイターなしかつ長野の場合")
-                }
-            }
             //初心者ゲレンデかつナイターありかつ新潟の場合
             else if data.begginer == 1 && data.nighter == 1 && data.area == "Nigata"{
                 if Int(gelandeArray[7])! > 40 && Int(gelandeArray[10])! == 1 && Double(gelandeArray[11])! <= data.liftchicket && Int(gelandeArray[6])! >= data.course && gelandeArray[12] == "新潟"{
@@ -81,94 +74,173 @@ class MapResultViewController: UIViewController,UITableViewDelegate,UITableViewD
                     gelandeCalc()
                     print("初心者ゲレンデかつナイターなしかつ新潟の場合")
                 }
+            }
+            //初心者ゲレンデかつナイターありかつ群馬の場合
+            if data.begginer == 1 && data.nighter == 1 && data.area == "Gunma"{
+                if Int(gelandeArray[7])! > 40 && Int(gelandeArray[10])! == 1 && Double(gelandeArray[11])! <= data.liftchicket && Int(gelandeArray[6])! >= data.course && gelandeArray[12] == "群馬"{
+                    gelandeCalc()
+                    print("初心者ゲレンデかつナイターありかつ群馬の場合")
+                }
+            }
+                //初心者ゲレンデかつナイターなしかつ群馬の場合
+            else if data.begginer == 1 && data.nighter == 0 && data.area == "Gunma"{
+                if Int(gelandeArray[7])! > 40 && Int(gelandeArray[10])! == 0 && Double(gelandeArray[11])! <= data.liftchicket && Int(gelandeArray[6])! >= data.course && gelandeArray[12] == "群馬"{
+                    gelandeCalc()
+                    print("初心者ゲレンデかつナイターなしかつ群馬の場合")
+                }
+            }
+                
             //中級者ゲレンデかつナイターありかつ長野の場合
-            }else if data.middle == 1 && data.nighter == 1 && data.area == "Nagano"{
+            else if data.middle == 1 && data.nighter == 1 && data.area == "Nagano"{
                 if Int(gelandeArray[8])! > 40 && Int(gelandeArray[10])! == 1 && Double(gelandeArray[11])! <= data.liftchicket && Int(gelandeArray[6])! >= data.course &&  gelandeArray[12] == "長野"{
                     gelandeCalc()
                     print("中級者ゲレンデかつナイターありかつ長野の場合")
                 }
+            }
             //中級者ゲレンデかつナイターなしかつ長野の場合
-            }else if data.middle == 1 && data.nighter == 0 && data.area == "Nagano"{
+            else if data.middle == 1 && data.nighter == 0 && data.area == "Nagano"{
                 if Int(gelandeArray[8])! > 40 && Int(gelandeArray[10])! == 0 && Double(gelandeArray[11])! <= data.liftchicket && Int(gelandeArray[6])! >= data.course && gelandeArray[12] == "長野"{
                     gelandeCalc()
                     print("中級者ゲレンデかつナイターなしかつ長野の場合")
                 }
+            }
             //中級者ゲレンデかつナイターありかつ新潟の場合
-            }else if data.middle == 1 && data.nighter == 1 && data.area == "Nigata"{
+            else if data.middle == 1 && data.nighter == 1 && data.area == "Nigata"{
                 if Int(gelandeArray[8])! > 40 && Int(gelandeArray[10])! == 1 && Double(gelandeArray[11])! <= data.liftchicket && Int(gelandeArray[6])! >= data.course && gelandeArray[12] == "新潟"{
                     gelandeCalc()
                     print("中級者ゲレンデかつナイターありかつ新潟の場合")
                 }
+            }
             //中級者ゲレンデかつナイターなしかつ新潟の場合
-            }else if data.middle == 1 && data.nighter == 0 && data.area == "Nigata"{
+            else if data.middle == 1 && data.nighter == 0 && data.area == "Nigata"{
                 if Int(gelandeArray[8])! > 40 && Int(gelandeArray[10])! == 0 && Double(gelandeArray[11])! <= data.liftchicket && Int(gelandeArray[6])! >= data.course && gelandeArray[12] == "新潟"{
                     gelandeCalc()
                     print("中級者ゲレンデかつナイターなしかつ新潟の場合")
                 }
+            }
+            //中級者ゲレンデかつナイターありかつ群馬の場合
+            else if data.middle == 1 && data.nighter == 1 && data.area == "Gunma"{
+                if Int(gelandeArray[8])! > 40 && Int(gelandeArray[10])! == 1 && Double(gelandeArray[11])! <= data.liftchicket && Int(gelandeArray[6])! >= data.course &&  gelandeArray[12] == "群馬"{
+                    gelandeCalc()
+                    print("中級者ゲレンデかつナイターありかつ群馬の場合")
+                }
+            }
+            //中級者ゲレンデかつナイターなしかつ群馬の場合
+            else if data.middle == 1 && data.nighter == 0 && data.area == "Gunma"{
+                if Int(gelandeArray[8])! > 40 && Int(gelandeArray[10])! == 0 && Double(gelandeArray[11])! <= data.liftchicket && Int(gelandeArray[6])! >= data.course && gelandeArray[12] == "群馬"{
+                    gelandeCalc()
+                    print("中級者ゲレンデかつナイターなしかつ群馬の場合")
+                }
+            }
+                
             //上級者ゲレンデかつナイターありかつ長野の場合
-            }else if data.hard == 1 && data.nighter == 1 && data.area == "Nagano"{
+            else if data.hard == 1 && data.nighter == 1 && data.area == "Nagano"{
                 if Int(gelandeArray[9])! > 30 && Int(gelandeArray[10])! == 1 && Double(gelandeArray[11])! <= data.liftchicket && Int(gelandeArray[6])! >= data.course && gelandeArray[12] == "長野"{
                     gelandeCalc()
                     print("上級者ゲレンデかつナイターありかつ長野の場合")
                 }
+            }
             //上級者ゲレンデかつナイターなしかつ長野の場合
-            }else if data.hard == 1 && data.nighter == 0 && data.area == "Nagano"{
+            else if data.hard == 1 && data.nighter == 0 && data.area == "Nagano"{
                 if Int(gelandeArray[9])! > 30 && Int(gelandeArray[10])! == 0 && Double(gelandeArray[11])! <= data.liftchicket && Int(gelandeArray[6])! >= data.course && gelandeArray[12] == "長野"{
                     gelandeCalc()
                     print("上級者ゲレンデかつナイターなしかつ長野の場合")
                 }
+            }
             //上級者ゲレンデかつナイターありかつ新潟の場合
-            }else if data.hard == 1 && data.nighter == 1 && data.area == "Nigata"{
+            else if data.hard == 1 && data.nighter == 1 && data.area == "Nigata"{
                 if Int(gelandeArray[9])! > 30 && Int(gelandeArray[10])! == 1 && Double(gelandeArray[11])! <= data.liftchicket && Int(gelandeArray[6])! >= data.course && gelandeArray[12] == "新潟"{
                     gelandeCalc()
                     print("上級者ゲレンデかつナイターありかつ新潟の場合")
                 }
+            }
             //上級者ゲレンデかつナイターなしかつ新潟の場合
-            }else if data.hard == 1 && data.nighter == 0 && data.area == "Nigata"{
+            else if data.hard == 1 && data.nighter == 0 && data.area == "Nigata"{
                 if Int(gelandeArray[9])! > 30 && Int(gelandeArray[10])! == 0 && Double(gelandeArray[11])! <= data.liftchicket && Int(gelandeArray[6])! >= data.course &&  gelandeArray[12] == "新潟"{
                     gelandeCalc()
                     print("上級者ゲレンデかつナイターなしかつ新潟の場合")
                 }
+            }
+            //上級者ゲレンデかつナイターありかつ群馬の場合
+            else if data.hard == 1 && data.nighter == 1 && data.area == "Gunma"{
+                if Int(gelandeArray[9])! > 30 && Int(gelandeArray[10])! == 1 && Double(gelandeArray[11])! <= data.liftchicket && Int(gelandeArray[6])! >= data.course && gelandeArray[12] == "群馬"{
+                    gelandeCalc()
+                    print("上級者ゲレンデかつナイターありかつ群馬の場合")
+                }
+            }
+                //上級者ゲレンデかつナイターなしかつ群馬の場合
+            else if data.hard == 1 && data.nighter == 0 && data.area == "Gunma"{
+                if Int(gelandeArray[9])! > 30 && Int(gelandeArray[10])! == 0 && Double(gelandeArray[11])! <= data.liftchicket && Int(gelandeArray[6])! >= data.course && gelandeArray[12] == "群馬"{
+                    gelandeCalc()
+                    print("上級者ゲレンデかつナイターなしかつ長野の場合")
+                }
+            }
+                
             //ナイターあり長野の場合
-            }else if data.nighter == 1 && data.area == "Nagano"{
+            else if data.nighter == 1 && data.area == "Nagano"{
                 if Int(gelandeArray[10])! == 1 && Double(gelandeArray[11])! <= data.liftchicket && Int(gelandeArray[6])! >= data.course && gelandeArray[12] == "長野"{
                     gelandeCalc()
                     print("ナイターあり長野の場合")
                 }
+            }
             //ナイターあり新潟の場合
-            }else if data.nighter == 1 && data.area == "Nigata"{
+            else if data.nighter == 1 && data.area == "Nigata"{
                 if Int(gelandeArray[10])! == 1 && Double(gelandeArray[11])! <= data.liftchicket && Int(gelandeArray[6])! >= data.course && gelandeArray[12] == "新潟"{
                     gelandeCalc()
-                    print("新潟")
                     print("ナイターあり新潟の場合")
                 }
+            }
+            //ナイターあり新潟の場合
+            else if data.nighter == 1 && data.area == "Gunma"{
+                if Int(gelandeArray[10])! == 1 && Double(gelandeArray[11])! <= data.liftchicket && Int(gelandeArray[6])! >= data.course && gelandeArray[12] == "群馬"{
+                    gelandeCalc()
+                    print("ナイターあり群馬の場合")
+                }
+            }
             //ナイターなし長野の場合
-            }else if data.nighter == 0 && data.area == "Nagano"{
+            else if data.nighter == 0 && data.area == "Nagano"{
                 if Int(gelandeArray[10])! == 0 && Double(gelandeArray[11])! <= data.liftchicket && Int(gelandeArray[6])! >= data.course && gelandeArray[12] == "長野"{
                     gelandeCalc()
                     print("ナイターなし長野の場合")
                 }
+            }
             //ナイターなし新潟の場合
-            }else if data.nighter == 0 && data.area == "Nigata"{
+            else if data.nighter == 0 && data.area == "Nigata"{
                 if Int(gelandeArray[10])! == 0 && Double(gelandeArray[11])! <= data.liftchicket && Int(gelandeArray[6])! >= data.course && gelandeArray[12] == "新潟"{
                     gelandeCalc()
                     print("ナイターなし新潟の場合")
                 }
-            }else{
+            }
+            //ナイターなし群馬の場合
+            else if data.nighter == 0 && data.area == "Gunma"{
+                if Int(gelandeArray[10])! == 0 && Double(gelandeArray[11])! <= data.liftchicket && Int(gelandeArray[6])! >= data.course && gelandeArray[12] == "群馬"{
+                    gelandeCalc()
+                    print("ナイターなし群馬の場合")
+                }
+            }
+            //ナイターありの場合
+            else if data.nighter == 1{
+                if Int(gelandeArray[10])! == 0 && Double(gelandeArray[11])! <= data.liftchicket && Int(gelandeArray[6])! >= data.course{
+                    gelandeCalc()
+                    print("ナイターありの場合")
+                }
+            }
+            
+            else{
                 if Double(gelandeArray[11])! <= data.liftchicket && Int(gelandeArray[6])! >= data.course{
                     gelandeCalc()
                     print("えls")
                 }
             }
             //print(data)
-            print(gelandeArray)
+            //print(gelandeArray)
             areaCount += 1
             gelandeArray.removeAll()
         }
         gelandeArray.removeAll()
         areaCount = 0
-        print(gelandeCount)
-        print("name\(gelandenameArray)")
+        //print(gelandeCount)
+        //print("name\(gelandenameArray)")
  
         //グラデーションの設定
         let gradientLayer = CAGradientLayer()
